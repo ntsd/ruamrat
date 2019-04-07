@@ -1,4 +1,3 @@
-import { Link } from 'gatsby'
 import PropTypes from 'prop-types'
 import './header.css'
 import React, { Component } from 'react'
@@ -52,8 +51,7 @@ export default class Header extends Component {
           <h1>รวมรัตน์</h1>
           <nav>
             <a href="#">หน้าแรก</a>
-            <a href="#">เกี่ยวกับเรา</a>
-            <a href="#">บริการของเรา</a>
+            <a href="#">บริการ</a>
             <a href="#">ผลงาน</a>
             <a href="#">ติดต่อเรา</a>
           </nav>

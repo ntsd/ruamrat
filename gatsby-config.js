@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: `กระจกอลูมิเนียม`,
+    title: `รวมรัตน์ กระจกอลูมิเนียม`,
     description: `รวมรัตน์ กระจกอลูมิเนียม`,
     author: `@gatsbyjs`,
   },
