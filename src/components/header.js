@@ -1,42 +1,64 @@
 import { Link } from 'gatsby'
 import PropTypes from 'prop-types'
-import React from 'react'
+import './header.css'
+import React, { Component } from 'react'
 
-const Header = ({ siteTitle }) => (
-  <div
-    style={{
-      background: `rebeccapurple`,
-      marginBottom: `1.45rem`,
-    }}
-  >
-    <div
-      style={{
-        margin: `0 auto`,
-        maxWidth: 960,
-        padding: `1.45rem 1.0875rem`,
-      }}
-    >
-      <h1 style={{ margin: 0 }}>
-        <Link
-          to="/"
-          style={{
-            color: `white`,
-            textDecoration: `none`,
-          }}
-        >
-          {siteTitle}
-        </Link>
-      </h1>
-    </div>
-  </div>
-)
+export default class Header extends Component {
+  static propTypes = {
+    siteTitle: PropTypes.string,
+  }
 
-Header.propTypes = {
-  siteTitle: PropTypes.string,
+  static defaultProps = {
+    siteTitle: ``,
+  }
+
+  componentDidMount() {
+    var docElem = document.documentElement,
+      header = document.getElementsByClassName('cbp-af-header')[0],
+      didScroll = false,
+      changeHeaderOn = 300;
+
+    function init() {
+      window.addEventListener('scroll', function (event) {
+        if (!didScroll) {
+          didScroll = true;
+          setTimeout(scrollPage, 250);
+        }
+      }, false);
+    }
+
+    function scrollPage() {
+      var sy = scrollY();
+      if (sy >= changeHeaderOn) {
+        header.classList.add('cbp-af-header-shrink');
+      }
+      else {
+        header.classList.remove('cbp-af-header-shrink');
+      }
+      didScroll = false;
+    }
+
+    function scrollY() {
+      return window.pageYOffset || docElem.scrollTop;
+    }
+
+    init();
+  }
+
+  render() {
+    return (
+      <div class="cbp-af-header">
+        <div class="cbp-af-inner">
+          <h1>รวมรัตน์</h1>
+          <nav>
+            <a href="#">หน้าแรก</a>
+            <a href="#">เกี่ยวกับเรา</a>
+            <a href="#">บริการของเรา</a>
+            <a href="#">ผลงาน</a>
+            <a href="#">ติดต่อเรา</a>
+          </nav>
+        </div>
+      </div>
+    )
+  }
 }
-
-Header.defaultProps = {
-  siteTitle: ``,
-}
-
-export default Header
