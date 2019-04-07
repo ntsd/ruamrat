@@ -50,10 +50,28 @@
 	font-weight: 700;
 	margin: 0 0 0 20px;
 	font-size: 1.4em;
+	position: relative;
 }
 
-.cbp-af-header nav a:hover {
-	color: #333;
+.cbp-af-header nav a:after {
+    content: "";
+    width: 0%;
+    height: 2px;
+    position: absolute;
+    bottom: -4px;
+    right: 0;
+    background: #fff;
+    opacity: 0;
+	pointer-events: none;
+	-webkit-transition: opacity ease 0.6s,width ease 0.6s;
+    -ms-transition: opacity ease 0.6s,width ease 0.6s;
+    transition: opacity ease 0.6s,width ease 0.6s;
+}
+
+.cbp-af-header nav a:hover:after {
+	width: 100%;
+    left: 0;
+    opacity: 1;
 }
 
 /* Transitions and class for reduced height */

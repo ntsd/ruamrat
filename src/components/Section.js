@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 
 const Section = ({ children }) => (
-  <div style={{minHeight: '100vh', backgroundColor: 'black'}}>
+  <div style={{minHeight: '100vh', backgroundColor: 'black', color: '#fff'}}>
     {children}
   </div>
 )
