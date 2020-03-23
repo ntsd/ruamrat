@@ -27,9 +27,7 @@ const Layout = ({ children }) => (
         >
           {children}
           <footer>
-            © {new Date().getFullYear()}, Built with
-            {` `}
-            <a href="https://www.gatsbyjs.org">Gatsby</a>
+            Copyright © {new Date().getFullYear()}, Made with ❤️ by <a href="https://www.hotcode.dev">hotcode</a>
           </footer>
         </div>
       </>
