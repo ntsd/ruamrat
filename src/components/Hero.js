@@ -30,11 +30,11 @@ const BgImage = styled(Image)`
   left: 0;
   width: 100%;
   z-index: -1;
-  height: ${props => props.height || '100vh'};
+  height: ${ props => props.height || '100vh' };
   & > img {
-    object-fit: ${props => props.fit || 'cover'} !important;
-    object-position: ${props => props.position || '50% 50%'} !important;
-    font-family: 'object-fit: ${props => props.fit || 'cover'} !important; object-position: ${props => props.position || '50% 50%'} !important;'
+    object-fit: ${ props => props.fit || 'cover' } !important;
+    object-position: ${ props => props.position || '50% 50%' } !important;
+    font-family: 'object-fit: ${ props => props.fit || 'cover' } !important; object-position: ${ props => props.position || '50% 50%' } !important;'
   }
 `
 
@@ -43,9 +43,9 @@ class Hero extends React.Component {
     const { children } = this.props
     return (
       <Container>
-        <BgImage {...this.props}/>
+        <BgImage { ...this.props }/>
         <Overlay>
-          {children}
+          { children }
         </Overlay>
       </Container>
     )

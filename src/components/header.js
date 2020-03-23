@@ -3,6 +3,7 @@ import './header.css'
 import React, { Component } from 'react'
 
 export default class Header extends Component {
+
   static propTypes = {
     siteTitle: PropTypes.string,
   }
@@ -46,14 +47,14 @@ export default class Header extends Component {
 
   render() {
     return (
-      <div class="cbp-af-header">
-        <div class="cbp-af-inner">
+      <div className="cbp-af-header">
+        <div className="cbp-af-inner">
           <h1>รวมรัตน์</h1>
           <nav>
-            <a href="#">หน้าแรก</a>
-            <a href="#">บริการ</a>
-            <a href="#">ผลงาน</a>
-            <a href="#">ติดต่อเรา</a>
+            <a href="#home">หน้าแรก</a>
+            <a href="#service">บริการ</a>
+            <a href="#portfolio">ผลงาน</a>
+            <a href="#contact">ติดต่อเรา</a>
           </nav>
         </div>
       </div>

@@ -1,19 +1,18 @@
 import React from 'react'
 
 import Layout from '../components/layout'
-import Image from '../components/image'
 import SEO from '../components/seo'
-import Hero from '../components/Hero'
-import Section from '../components/Section'
+import Hero from '../components/hero'
+import Section from '../components/section'
 
-const IndexPage = ({data}) => (
+const IndexPage = ({ data }) => (
   <Layout>
-    <SEO title="รวมรัตน์" keywords={[`รวมรัตน์`, `กระจกอลูมิเนียม`, `ติดตั้งกระจกอลูมิเนียม`]} />
-    <Hero fluid={data.hero.childImageSharp.fluid}>
+    <SEO title="รวมรัตน์" keywords={ [`รวมรัตน์`, `กระจกอลูมิเนียม`, `ติดตั้งกระจกอลูมิเนียม`] } />
+    <Hero fluid={ data.hero.childImageSharp.fluid }>
     </Hero>
-    <Section>
+    <Section>test
     </Section>
-    <Section>
+    <Section>test
     </Section>
   </Layout>
 )

@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 
 const Section = ({ children }) => (
   <div style={{minHeight: '100vh', backgroundColor: 'black', color: '#fff'}}>
-    {children}
+    { children }
   </div>
 )
 
