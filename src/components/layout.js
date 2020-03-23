@@ -26,7 +26,7 @@ const Layout = ({ children }) => (
           }}
         >
           {children}
-          <footer>
+          <footer style={{textAlign: 'center'}}>
             Copyright © {new Date().getFullYear()}, Made with ❤️ by <a href="https://www.hotcode.dev">Hotcode</a>
           </footer>
         </div>
