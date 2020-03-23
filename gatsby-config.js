@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: `รวมรัตน์ กระจกอลูมิเนียม`,
-    description: `รวมรัตน์ กระจกอลูมิเนียม`,
+    description: `รวมรัตน์ กระจกอลูมิเนียม | จำหน่าย ผลิต ติดตั้ง กระจกอลูมิเนียม พร้อมอุปกรณ์`,
     author: `@gatsbyjs`,
   },
   plugins: [

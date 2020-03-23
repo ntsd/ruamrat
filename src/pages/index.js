@@ -22,7 +22,7 @@ export default IndexPage
 
 export const pageQuery = graphql`
   query indexQuery {
-    hero: file(relativePath: { eq: "header.jpg" }) {
+    hero: file(relativePath: { eq: "header.jpeg" }) {
       childImageSharp {
         fluid(quality: 100) {
           ...GatsbyImageSharpFluid
