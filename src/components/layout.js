@@ -27,7 +27,7 @@ const Layout = ({ children }) => (
         >
           {children}
           <footer>
-            Copyright © {new Date().getFullYear()}, Made with ❤️ by <a href="https://www.hotcode.dev">hotcode</a>
+            Copyright © {new Date().getFullYear()}, Made with ❤️ by <a href="https://www.hotcode.dev">Hotcode</a>
           </footer>
         </div>
       </>
