@@ -5,17 +5,22 @@ import Layout from '../components/layout'
 import SEO from '../components/seo'
 import Hero from '../components/hero'
 import Section from '../components/section'
+import { MaintenancePage } from '@hotcode/maintenance-page'
 
 const IndexPage = ({ data }) => (
-  <Layout>
-    <SEO title="รวมรัตน์" keywords={ [`รวมรัตน์`, `กระจกอลูมิเนียม`, `ติดตั้งกระจกอลูมิเนียม`] } />
-    <Hero fluid={ data.hero.childImageSharp.fluid }>
-    </Hero>
-    <Section>test
-    </Section>
-    <Section>test
-    </Section>
-  </Layout>
+  true
+    ?
+      <MaintenancePage color="red"></MaintenancePage>
+    :
+      <Layout>
+        <SEO title="รวมรัตน์" keywords={[`รวมรัตน์`, `กระจกอลูมิเนียม`, `ติดตั้งกระจกอลูมิเนียม`]} />
+        <Hero fluid={data.hero.childImageSharp.fluid}>
+        </Hero>
+        <Section>
+        </Section>
+        <Section>
+        </Section>
+      </Layout>
 )
 
 export default IndexPage
