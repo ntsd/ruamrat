@@ -24,23 +24,31 @@ const Overlay = styled.div`
   text-align: center;
 `
 
-const BgImage = styled(Image)`
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  z-index: -1;
-  height: ${ props => props.height || '100vh' };
-  & > img {
-    object-fit: ${ props => props.fit || 'cover' } !important;
-    object-position: ${ props => props.position || '50% 50%' } !important;
-    font-family: 'object-fit: ${ props => props.fit || 'cover' } !important; object-position: ${ props => props.position || '50% 50%' } !important;'
-  }
-`
+interface HeroProps {
+  height?: string;
+  fit?: string;
+  position?: string;
+  children: never[];
+  fluid: any;
+}
 
-class Hero extends React.Component {
+export class Hero extends React.Component<HeroProps> {
   render() {
     const { children } = this.props
+
+    const BgImage = styled(Image)`
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: -1;
+      height: ${ this.props.height || '100vh' };
+      & > img {
+        object-fit: ${ this.props.fit || 'cover' } !important;
+        object-position: ${ this.props.position || '50% 50%' } !important;
+      }
+    `
+
     return (
       <Container>
         <BgImage { ...this.props }/>
@@ -51,5 +59,3 @@ class Hero extends React.Component {
     )
   }
 }
-
-export default Hero

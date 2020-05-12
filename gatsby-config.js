@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
-    title: `รวมรัตน์ กระจกอลูมิเนียม`,
-    description: `รวมรัตน์ กระจกอลูมิเนียม | จำหน่าย ผลิต ติดตั้ง กระจกอลูมิเนียม พร้อมอุปกรณ์`,
+    title: `รวมรัตน์ กระจก อลูมิเนียม`,
+    description: `รวมรัตน์ กระจก อลูมิเนียม | จำหน่าย ผลิต ติดตั้ง กระจก อลูมิเนียม พร้อมอุปกรณ์`,
     author: `@hotcode`,
   },
   plugins: [
@@ -10,7 +10,7 @@ module.exports = {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `images`,
-        path: `${__dirname}/src/images`,
+        path: `${__dirname}/src/assets/images`,
       },
     },
     `gatsby-transformer-sharp`,
@@ -24,9 +24,10 @@ module.exports = {
         background_color: `#663399`,
         theme_color: `#663399`,
         display: `minimal-ui`,
-        icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
+        icon: `src/assets/images/gatsby-icon.png`, // This path is relative to the root of the site.
       },
     },
-    'gatsby-plugin-offline',
+    `gatsby-plugin-offline`,
+    `gatsby-plugin-typescript`
   ],
 }
