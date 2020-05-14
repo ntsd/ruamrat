@@ -1,6 +1,7 @@
 import React from 'react'
 import Image from 'gatsby-image'
 import styled from 'styled-components'
+import { useStaticQuery, graphql } from 'gatsby'
 
 const Container = styled.div`
   display: flex;
@@ -24,38 +25,47 @@ const Overlay = styled.div`
   text-align: center;
 `
 
+const BgImage = styled(Image)`
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: -1;
+  height: ${ (props: HeroProps) => props.height || '100vh' };
+  & > img {
+    object-fit: ${ (props: HeroProps) => props.fit || 'cover' } !important;
+    object-position: ${ (props: HeroProps) => props.position || '50% 50%' } !important;
+  }
+`
+
 interface HeroProps {
   height?: string;
   fit?: string;
   position?: string;
   children: never[];
-  fluid: any;
 }
 
-export class Hero extends React.Component<HeroProps> {
-  render() {
-    const { children } = this.props
+export const Hero: React.FC<HeroProps> = (props: HeroProps) => {
+  const { children } = props;
 
-    const BgImage = styled(Image)`
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      z-index: -1;
-      height: ${ this.props.height || '100vh' };
-      & > img {
-        object-fit: ${ this.props.fit || 'cover' } !important;
-        object-position: ${ this.props.position || '50% 50%' } !important;
+  const data = useStaticQuery(graphql`
+    query indexQuery {
+      hero: file(relativePath: { eq: "header.jpeg" }) {
+        childImageSharp {
+          fluid(quality: 100) {
+            ...GatsbyImageSharpFluid
+          }
+        }
       }
-    `
+    }
+  `)
 
-    return (
-      <Container>
-        <BgImage { ...this.props }/>
-        <Overlay>
-          { children }
-        </Overlay>
-      </Container>
-    )
-  }
+  return (
+    <Container>
+      <BgImage { ...props } fluid={data.hero.childImageSharp.fluid}/>
+      <Overlay>
+        { children }
+      </Overlay>
+    </Container>
+  )
 }

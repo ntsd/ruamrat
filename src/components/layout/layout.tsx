@@ -2,9 +2,15 @@ import React from 'react'
 import { StaticQuery, graphql } from 'gatsby'
 
 import { Navigation } from '../navigation/navigation'
+import '../../assets/scss/main.scss'
 import './layout.css'
+import { Footer } from '../footer/footer'
 
-export const Layout: React.FC<{children: JSX.Element[]}> = ({ children }) => (
+interface LayoutProps {
+  children: JSX.Element[];
+}
+
+export const Layout: React.FC<LayoutProps> = ({ children }) => (
   <StaticQuery
     query={graphql`
       query SiteTitleQuery {
@@ -18,17 +24,8 @@ export const Layout: React.FC<{children: JSX.Element[]}> = ({ children }) => (
     render={data => (
       <>
         <Navigation siteTitle={data.site.siteMetadata.title} />
-        <div
-          style={{
-            margin: `0 auto`,
-            paddingTop: 0,
-          }}
-        >
-          { children }
-        </div>
-        <footer style={{textAlign: 'center'}}>
-          Copyright © {new Date().getFullYear()} <a href="https://hotcode.dev">Hotcode</a>
-        </footer>
+        { children }
+        <Footer/>
       </>
     )}
   />

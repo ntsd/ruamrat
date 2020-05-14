@@ -1,8 +1,8 @@
 import PropTypes from 'prop-types'
 import './navigation.css'
-import React, { Component } from 'react'
+import React from 'react'
 
-export class Navigation extends Component {
+export class Navigation extends React.Component {
 
   static propTypes = {
     siteTitle: PropTypes.string,
