@@ -1,31 +1,42 @@
-# ruamrat
+# Ruamrat
 
-Todo List
+## Colors
+
+## Todo List
+
 1. Components
+
 - Header
 - Menu Navigation
 - Carousel
 - Main Content
 - Footer
 
-2. Page
+1. Page
+
 - Home หน้าแรก
 - Gallery ผลงาน
 - About Us ติดต่อเรา
 
-3. Contract
+1. Contract
+
 - Facebook
-- Line 
+- Line
 - Tel.
 - Address
 - Google Map
 
-Examples Sites
+## Examples Sites
+
+https://www.scinterbuilt.co.th/
+https://www.passorn-steel.com/
 http://www.thanachai-glass.com/aluminum/
 http://www.194aluminium.com
 http://www.mjglassaluminium.com
+http://www.jj-aluminum.co.th/index.html
 
-Design
+## Design
+
 https://www.awwwards.com/awwwards/collections/image-gallery-and-slideshows/
 https://www.newlegend4x4.com/
 http://leclercqassocies.fr/?home

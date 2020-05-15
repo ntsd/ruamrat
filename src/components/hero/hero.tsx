@@ -2,12 +2,15 @@ import React from 'react'
 import Image from 'gatsby-image'
 import styled from 'styled-components'
 import { useStaticQuery, graphql } from 'gatsby'
+import './hero.scss'
+import { GoDownButton } from '../godown-button/godown-button'
+
 
 const Container = styled.div`
   display: flex;
   position: relative;
   align-items: center;
-  background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.4));
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.2));
 `
 
 const Overlay = styled.div`
@@ -65,6 +68,7 @@ export const Hero: React.FC<HeroProps> = (props: HeroProps) => {
       <BgImage { ...props } fluid={data.hero.childImageSharp.fluid}/>
       <Overlay>
         { children }
+        <GoDownButton></GoDownButton>
       </Overlay>
     </Container>
   )
