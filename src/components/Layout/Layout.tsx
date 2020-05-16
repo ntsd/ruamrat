@@ -1,7 +1,7 @@
 import React from 'react'
 import { StaticQuery, graphql } from 'gatsby'
 import { Navigation } from '../Navigation/Navigation'
-import './layout.scss'
+import './Layout.scss'
 import { Footer } from '../Footer/Footer'
 
 interface LayoutProps {

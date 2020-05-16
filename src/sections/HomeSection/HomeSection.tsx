@@ -27,7 +27,7 @@ export const HomeSection: React.FC = () => {
   
   const homeDescriptionFooter = (
     <>
-      <a target="_blank" rel="noopener noreferrer" href="https://lin.ee/2GVWsmiLd">
+      <a target="_blank" rel="noopener noreferrer" href="tel:0994916588">
         <Button size={'large'} style={{ backgroundColor: '#0000B9', color: '#fff' }}>
           <RiPhoneLine/>
           &nbsp;099-4916588
