@@ -1,10 +1,10 @@
 import React from 'react'
-
+import "./Section.css"
 
 interface SectionProps {}
 
 export const Section: React.FC<SectionProps> = ({ children }) => (
-  <div style={{minHeight: '100vh', backgroundColor: 'black', color: '#fff'}}>
+  <section className="section">
     { children }
-  </div>
+  </section>
 )

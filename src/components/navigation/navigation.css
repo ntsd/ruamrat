@@ -3,7 +3,7 @@
   top: 0;
   left: 0;
   width: 100%;
-  /* background: #f6f6f6; */
+  background: rgba(255, 255, 255, 0.7);
   z-index: 10000;
   height: 180px;
   overflow: hidden;
@@ -34,7 +34,7 @@
 
 .cbp-af-header h1 {
   text-transform: uppercase;
-  color: #fff;
+  color: rgba(0, 0, 0, 0.8);
   letter-spacing: 4px;
   font-size: 4em;
   margin: 0;
@@ -46,7 +46,7 @@
 }
 
 .cbp-af-header nav a {
-  color: #fff;
+  color: rgba(0, 0, 0, 0.8);
   font-weight: 700;
   margin: 0 0 0 20px;
   font-size: 1.4em;
@@ -60,7 +60,7 @@
     position: absolute;
     bottom: -4px;
     right: 0;
-    background: #fff;
+    background: rgba(0, 0, 0, 0.8);
     opacity: 0;
   pointer-events: none;
   -webkit-transition: opacity ease 0.6s,width ease 0.6s;
@@ -83,7 +83,7 @@
 }
 
 .cbp-af-header.cbp-af-header-shrink {
-  height: 90px;
+  height: auto;
 }
 
 .cbp-af-header.cbp-af-header-shrink h1,

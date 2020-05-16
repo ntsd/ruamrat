@@ -1,6 +1,6 @@
 import React from 'react';
-import ButtonArrow from '../ButtonArrow';
-import './DescriptionCard.scss';
+import { ButtonArrow } from '../ButtonArrow/ButtonArrow';
+import './DescriptionCard.css';
 import { navigate } from 'gatsby';
 
 export interface DescriptionCardProps {
