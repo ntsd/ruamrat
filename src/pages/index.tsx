@@ -11,10 +11,6 @@ const IndexPage = ({}) => {
       <Seo title="รวมรัตน์" description="ติดตั้ง ผลิต กระจก อลูมิเนียม" keywords={[`รวมรัตน์`, `กระจกอลูมิเนียม`, `ติดตั้งกระจกอลูมิเนียม`]} />
       <HomeSection>
       </HomeSection>
-      <Section>
-      </Section>
-      <Section>
-      </Section>
     </Layout>
   )
 }
