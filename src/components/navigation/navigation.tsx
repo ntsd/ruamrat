@@ -1,22 +1,17 @@
-import PropTypes from 'prop-types'
-import './header.css'
-import React, { Component } from 'react'
+import React from 'react'
+import './Navigation.css'
 
-export default class Header extends Component {
+interface NavigationProps {
+  siteTitle: string;
+}
 
-  static propTypes = {
-    siteTitle: PropTypes.string,
-  }
-
-  static defaultProps = {
-    siteTitle: ``,
-  }
+export class Navigation extends React.Component<NavigationProps> {
 
   componentDidMount() {
     var docElem = document.documentElement,
       header = document.getElementsByClassName('cbp-af-header')[0],
       didScroll = false,
-      changeHeaderOn = 300;
+      changeHeaderOn = 90;
 
     function init() {
       window.addEventListener('scroll', function (event) {
@@ -49,7 +44,7 @@ export default class Header extends Component {
     return (
       <div className="cbp-af-header">
         <div className="cbp-af-inner">
-          <h1>รวมรัตน์</h1>
+          <div className="logo">รวมรัตน์</div>
           <nav>
             <a href="#home">หน้าแรก</a>
             <a href="#service">บริการ</a>
