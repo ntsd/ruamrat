@@ -7,22 +7,23 @@ import { DescriptionCard, DescriptionCardProps } from '../../components/Descript
 import { Image } from '../../components/Image/Image'
 import { Button } from '../../components/Button/Button'
 import './HomeSection.css'
+import { GoDownButton } from '../../components/GoDownButton/GoDownButton'
 
 export const HomeSection: React.FC = () => {
   const data = useStaticQuery(graphql`
-  query {
-    allFile(filter: { name: { eq: "home" }, sourceInstanceName: { eq: "images"}}) {
-      edges {
-        node {
-          childImageSharp {
-            fluid(maxWidth: 780) {
-              ...GatsbyImageSharpFluid
+    query {
+      allFile(filter: { name: { eq: "home" }, sourceInstanceName: { eq: "images"}}) {
+        edges {
+          node {
+            childImageSharp {
+              fluid(maxWidth: 780) {
+                ...GatsbyImageSharpFluid
+              }
             }
           }
         }
       }
     }
-  }
   `)
   
   const homeDescriptionFooter = (
@@ -32,7 +33,7 @@ export const HomeSection: React.FC = () => {
           <RiPhoneLine/>
           &nbsp;099-4916588
         </Button>
-      </a>
+      </a>&nbsp;&nbsp;
       <a target="_blank" rel="noopener noreferrer" href="https://lin.ee/2GVWsmiLd">
         <Button size={'large'} style={{backgroundColor: '#00B900', color: '#fff'}}>
           <RiLineLine/>
@@ -43,13 +44,14 @@ export const HomeSection: React.FC = () => {
   )
 
   const homeDescription: DescriptionCardProps = {
-    title: 'รับติดตั้ง กระจกและอลูมิเนียม',
-    description: 'รับผลิต-ติดตั้ง กระจกอลูมิเนียม, มุ้งพับจีบ, มุ้งบานเลื่อน, เหล็กดัด ผลิตและติดตั้งโดยทีมช่างมืออาชีพ ชัดเจน จริงใจ ไม่เอาเปรียบลูกค้า โดย บริษัท รวมรัตน์ เอ็นจิเนียริ่ง แอนด์ ซัพพลาย จำกัด',
+    title: 'รับติดตั้ง กระจก',
+    title2: 'และอลูมิเนียม',
+    description: 'รับติดตั้ง-ผลิต กระจกอลูมิเนียม, มุ้งพับจีบ, มุ้งบานเลื่อน, เหล็กดัด ผลิตและติดตั้งโดยทีมช่างมืออาชีพ ชัดเจน จริงใจ ไม่เอาเปรียบลูกค้า โดย บริษัท รวมรัตน์ เอ็นจิเนียริ่ง แอนด์ ซัพพลาย จำกัด',
     footer: homeDescriptionFooter
   }
 
   return (
-    <Section>
+    <Section style={{height: 'calc(100vh - 140px)', minHeight:0}}>
       <div className="home-container">
         <div className="item1">
           <DescriptionCard { ...homeDescription }/>
@@ -58,6 +60,7 @@ export const HomeSection: React.FC = () => {
           <Image withFrame fluid={data.allFile.edges[0].node.childImageSharp.fluid} />
         </div>
       </div>
+      <GoDownButton></GoDownButton>
     </Section>
   )
 }
