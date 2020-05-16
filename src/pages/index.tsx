@@ -1,10 +1,8 @@
 import React from 'react'
-import { graphql, useStaticQuery } from 'gatsby'
-
-import { Layout } from '../components/layout/layout'
-import { Seo } from '../components/seo/seo'
-import { Hero } from '../components/hero/hero'
-import { Section } from '../components/section/section'
+import { Layout } from '../components/Layout/Layout'
+import { Seo } from '../components/Seo/Seo'
+import { Hero } from '../components/Hero/Hero'
+import { Section } from '../components/Section/Section'
 
 const IndexPage = ({}) => {
   return (

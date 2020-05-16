@@ -1,16 +1,11 @@
-import PropTypes from 'prop-types'
-import './navigation.css'
 import React from 'react'
+import './Navigation.css'
 
-export class Navigation extends React.Component {
+interface NavigationProps {
+  siteTitle: string;
+}
 
-  static propTypes = {
-    siteTitle: PropTypes.string,
-  }
-
-  static defaultProps = {
-    siteTitle: ``,
-  }
+export class Navigation extends React.Component<NavigationProps> {
 
   componentDidMount() {
     var docElem = document.documentElement,

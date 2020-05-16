@@ -1,9 +1,8 @@
 import React from 'react'
 import { StaticQuery, graphql } from 'gatsby'
-
-import { Navigation } from '../navigation/navigation'
+import { Navigation } from '../Navigation/Navigation'
 import './layout.scss'
-import { Footer } from '../footer/footer'
+import { Footer } from '../Footer/Footer'
 
 interface LayoutProps {
   children: JSX.Element[];

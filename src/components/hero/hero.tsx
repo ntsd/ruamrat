@@ -2,8 +2,8 @@ import React from 'react'
 import Image from 'gatsby-image'
 import styled from 'styled-components'
 import { useStaticQuery, graphql } from 'gatsby'
-import './hero.scss'
-import { GoDownButton } from '../godown-button/godown-button'
+import './Hero.scss'
+import { GoDownButton } from '../GoDownButton/GoDownButton'
 
 
 const Container = styled.div`
