@@ -1,18 +1,15 @@
 import React from 'react';
-import { ButtonArrow } from '../ButtonArrow/ButtonArrow';
 import './DescriptionCard.css';
-import { navigate } from 'gatsby';
 
 export interface DescriptionCardProps {
   title: string;
   description: string;
   noCrown?: boolean;
-  longDescription?: boolean;
-  noButton?: boolean;
   titleStyle?: object;
+  footer?: any;
 }
 
-export const DescriptionCard: React.FC<DescriptionCardProps> = ({ noCrown, noButton, longDescription, titleStyle, title, description }) => {
+export const DescriptionCard: React.FC<DescriptionCardProps> = ({ title, description, noCrown, footer, titleStyle }) => {
   return (
     <div className="card-container">
       {
@@ -20,11 +17,8 @@ export const DescriptionCard: React.FC<DescriptionCardProps> = ({ noCrown, noBut
         <div className="horizontal-line" />
       }
       <h1 className="title" style={titleStyle}> {title} </h1>
-      <p className={`description ${longDescription && 'description-long'}`}>{description}</p>
-      {
-        !noButton &&
-        <ButtonArrow className="action-btn" type={'secondary'} size={'large'} onClick={() => navigate('/collections')}> Collections → </ButtonArrow>
-      }
+      <p className='description'>{description}</p>
+      { footer }
     </div>
   )
 }

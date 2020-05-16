@@ -11,7 +11,7 @@ export class Navigation extends React.Component<NavigationProps> {
     var docElem = document.documentElement,
       header = document.getElementsByClassName('cbp-af-header')[0],
       didScroll = false,
-      changeHeaderOn = 300;
+      changeHeaderOn = 90;
 
     function init() {
       window.addEventListener('scroll', function (event) {
@@ -44,7 +44,7 @@ export class Navigation extends React.Component<NavigationProps> {
     return (
       <div className="cbp-af-header">
         <div className="cbp-af-inner">
-          <h1>รวมรัตน์</h1>
+          <div className="logo">รวมรัตน์</div>
           <nav>
             <a href="#home">หน้าแรก</a>
             <a href="#service">บริการ</a>

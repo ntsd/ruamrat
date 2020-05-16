@@ -21,7 +21,9 @@ export const Layout: React.FC<LayoutProps> = ({ children }) => (
     `}
     render={data => (
       <>
-        <Navigation siteTitle={data.site.siteMetadata.title} />
+        <div style={{marginBottom: '140px'}}>
+          <Navigation siteTitle={data.site.siteMetadata.title} />
+        </div>
         { children }
         <Footer/>
       </>

@@ -3,9 +3,9 @@
   top: 0;
   left: 0;
   width: 100%;
-  background: rgba(255, 255, 255, 0.7);
+  background: rgba(255, 255, 255, 0.8);
   z-index: 10000;
-  height: 180px;
+  height: 140px;
   overflow: hidden;
   -webkit-transition: height 0.3s;
   -moz-transition: height 0.3s;
@@ -19,20 +19,20 @@
   padding: 0 1.875em;
 }
 
-.cbp-af-header h1,
+.cbp-af-header .logo,
 .cbp-af-header nav {
   display: inline-block;
   position: relative;
 }
 
  /* We just have one-lined elements, so we'll center the elements with the line-height set to the height of the header */
-.cbp-af-header h1,
+.cbp-af-header .logo,
 .cbp-af-header nav a {
-  line-height: 180px;
+  line-height: 140px;
   text-decoration: none;
 }
 
-.cbp-af-header h1 {
+.cbp-af-header .logo {
   text-transform: uppercase;
   color: rgba(0, 0, 0, 0.8);
   letter-spacing: 4px;
@@ -75,7 +75,7 @@
 }
 
 /* Transitions and class for reduced height */
-.cbp-af-header h1,
+.cbp-af-header .logo,
 .cbp-af-header nav a {
   -webkit-transition: all 0.3s;
   -moz-transition: all 0.3s;
@@ -86,12 +86,12 @@
   height: auto;
 }
 
-.cbp-af-header.cbp-af-header-shrink h1,
+.cbp-af-header.cbp-af-header-shrink .logo,
 .cbp-af-header.cbp-af-header-shrink nav a {
-  line-height: 90px;
+  line-height: 70px;
 }
 
-.cbp-af-header.cbp-af-header-shrink h1 {
+.cbp-af-header.cbp-af-header-shrink .logo {
   font-size: 2em;
 }
 
@@ -103,7 +103,7 @@
     padding: 0;
   }
 
-  .cbp-af-header h1,
+  .cbp-af-header .logo,
   .cbp-af-header nav {
     display: block;
     margin: 0 auto;
@@ -111,12 +111,12 @@
     float: none;
   }
 
-  .cbp-af-header h1,
+  .cbp-af-header .logo,
   .cbp-af-header nav a {
-    line-height: 80px;
+    line-height: 70px;
   }
 
-  .cbp-af-header h1 {
+  .cbp-af-header .logo {
     font-size: 3em;
   }
 
@@ -124,12 +124,12 @@
     margin: 0 10px;
   }
 
-  .cbp-af-header.cbp-af-header-shrink h1,
+  .cbp-af-header.cbp-af-header-shrink .logo,
   .cbp-af-header.cbp-af-header-shrink nav a {
     line-height: 45px;
   }
 
-  .cbp-af-header.cbp-af-header-shrink h1 {
+  .cbp-af-header.cbp-af-header-shrink .logo {
     font-size: 2em;
     display: none;
   }

@@ -5,6 +5,7 @@ import { DescriptionCard, DescriptionCardProps } from '../../components/Descript
 import { useStaticQuery, graphql } from 'gatsby'
 import { Image } from '../../components/Image/Image'
 import './HomeSection.css'
+import { Button } from '../../components/Button/Button'
 
 export const HomeSection: React.FC = () => {
   const data = useStaticQuery(graphql`
@@ -23,9 +24,17 @@ export const HomeSection: React.FC = () => {
   }
   `)
   
+  const homeDescriptionFooter = (
+    <>
+    <a target="_blank" rel="noopener noreferrer" href="https://lin.ee/2GVWsmiLd"><Button>Tel: 099-4916588</Button></a>
+    <a target="_blank" rel="noopener noreferrer" href="https://lin.ee/2GVWsmiLd"><img src="https://scdn.line-apps.com/n/line_add_friends/btn/th.png" alt="เพิ่มเพื่อน" height="36"></img></a>
+    </>
+  )
+
   const homeDescription: DescriptionCardProps = {
-    title: ' Fashion by Awesome Person',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'
+    title: 'รับติดตั้ง กระจกและอลูมิเนียม',
+    description: 'รับผลิต-ติดตั้ง กระจกอลูมิเนียม, มุ้งพับจีบ, มุ้งบานเลื่อน, เหล็กดัด ผลิตและติดตั้งโดยทีมช่างมืออาชีพ ชัดเจน จริงใจ ไม่เอาเปรียบลูกค้า โดย บริษัท รวมรัตน์ เอ็นจิเนียริ่ง แอนด์ ซัพพลาย จำกัด',
+    footer: homeDescriptionFooter
   }
 
   return (
