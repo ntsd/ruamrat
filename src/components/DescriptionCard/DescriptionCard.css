@@ -4,7 +4,7 @@
 }
 
 .horizontal-line {
-  background-color: #FFA726;
+  background-color: #ff2f00;
   height: 1em;
   width: 5em;
 }
@@ -12,6 +12,7 @@
 .title {
   font-size: 4.5em;
   font-weight: 300;
+  margin-top: 1.45rem;
 }
 
 .description {

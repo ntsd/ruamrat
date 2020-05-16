@@ -3,7 +3,7 @@ import './Button.css'
 
 interface ButtonProps {
   onClick?: (event: React.MouseEvent<HTMLButtonElement, MouseEvent>) => void,
-  style?: object,
+  style?: React.CSSProperties,
   size?: 'large' | 'small',
   className?: string,
   type?: 'primary' | 'secondary' | 'link',

@@ -2,6 +2,9 @@
 
 ## Colors
 
+Primary: #ff2f00
+Secondary: #ffdd00
+
 ## Todo List
 
 1. Components
