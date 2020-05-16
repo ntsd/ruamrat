@@ -3,13 +3,14 @@ import './DescriptionCard.css';
 
 export interface DescriptionCardProps {
   title: string;
+  title2: string;
   description: string;
   noCrown?: boolean;
   titleStyle?: object;
   footer?: any;
 }
 
-export const DescriptionCard: React.FC<DescriptionCardProps> = ({ title, description, noCrown, footer, titleStyle }) => {
+export const DescriptionCard: React.FC<DescriptionCardProps> = ({ title, title2, description, noCrown, footer, titleStyle }) => {
   return (
     <div className="card-container">
       {
@@ -17,6 +18,10 @@ export const DescriptionCard: React.FC<DescriptionCardProps> = ({ title, descrip
         <div className="horizontal-line" />
       }
       <h1 className="title" style={titleStyle}> {title} </h1>
+      {
+        title2 &&
+        <h1 className="title" style={titleStyle}> {title2} </h1>
+      }
       <p className='description'>{description}</p>
       { footer }
     </div>

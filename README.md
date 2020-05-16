@@ -2,7 +2,7 @@
 
 ## Colors
 
-Primary: #ff2f00
+Primary: #ff2f00, rgba(255, 47, 0, 0.8)
 Secondary: #ffdd00
 
 ## Todo List

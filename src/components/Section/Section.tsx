@@ -1,10 +1,12 @@
 import React from 'react'
 import "./Section.css"
 
-interface SectionProps {}
+interface SectionProps {
+  style?: React.CSSProperties;
+}
 
-export const Section: React.FC<SectionProps> = ({ children }) => (
-  <section className="section">
+export const Section: React.FC<SectionProps> = ({ children, style }) => (
+  <section className="section" style={style} >
     { children }
   </section>
 )
