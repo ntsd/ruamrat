@@ -11,7 +11,7 @@ import './HomeSection.css'
 export const HomeSection: React.FC = () => {
   const data = useStaticQuery(graphql`
   query {
-    allFile(filter: { name: { eq: "header" }, sourceInstanceName: { eq: "images"}}) {
+    allFile(filter: { name: { eq: "home" }, sourceInstanceName: { eq: "images"}}) {
       edges {
         node {
           childImageSharp {
@@ -33,9 +33,6 @@ export const HomeSection: React.FC = () => {
           &nbsp;099-4916588
         </Button>
       </a>
-      {/* <a target="_blank" rel="noopener noreferrer" href="https://lin.ee/2GVWsmiLd">
-        <img src="https://scdn.line-apps.com/n/line_add_friends/btn/th.png" alt="เพิ่มเพื่อน" height="36"></img>
-      </a> */}
       <a target="_blank" rel="noopener noreferrer" href="https://lin.ee/2GVWsmiLd">
         <Button size={'large'} style={{backgroundColor: '#00B900', color: '#fff'}}>
           <RiLineLine/>
