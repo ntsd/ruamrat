@@ -1,13 +1,13 @@
-import React from 'react'
+import React, { useLayoutEffect } from 'react'
 import './Navigation.css'
 
 interface NavigationProps {
   siteTitle: string;
 }
 
-export class Navigation extends React.Component<NavigationProps> {
+export const Navigation: React.FC<NavigationProps> = (siteTitle) => {
 
-  componentDidMount() {
+  useLayoutEffect(() => {
     var docElem = document.documentElement,
       header = document.getElementsByClassName('cbp-af-header')[0],
       didScroll = false,
@@ -38,21 +38,19 @@ export class Navigation extends React.Component<NavigationProps> {
     }
 
     init();
-  }
+  });
 
-  render() {
-    return (
-      <div className="cbp-af-header">
-        <div className="cbp-af-inner">
-          <div className="logo">รวมรัตน์</div>
-          <nav>
-            <a href="#home">หน้าแรก</a>
-            <a href="#service">บริการ</a>
-            <a href="#portfolio">ผลงาน</a>
-            <a href="#contact">ติดต่อเรา</a>
-          </nav>
-        </div>
+  return (
+    <div className="cbp-af-header">
+      <div className="cbp-af-inner">
+        <div className="logo">รวมรัตน์</div>
+        <nav>
+          <a href="#home">หน้าแรก</a>
+          <a href="#service">บริการ</a>
+          <a href="#portfolio">ผลงาน</a>
+          <a href="#contact">ติดต่อเรา</a>
+        </nav>
       </div>
-    )
-  }
+    </div>
+  )
 }

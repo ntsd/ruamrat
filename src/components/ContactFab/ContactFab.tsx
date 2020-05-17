@@ -1,17 +1,29 @@
 import React from 'react';
 import { Fab, Action } from 'react-tiny-fab';
 import 'react-tiny-fab/dist/styles.css';
-import { RiQuestionAnswerLine, RiLineLine, RiPhoneLine } from 'react-icons/ri';
+import { RiQuestionAnswerLine, RiLineLine, RiPhoneLine, RiFacebookLine } from 'react-icons/ri';
 
 export const ContactFab: React.FC = () => {
   return (
     <Fab
       icon={<RiQuestionAnswerLine />}
-      mainButtonStyles={{backgroundColor: 'rgba(255, 47, 0, 0.8)'}}
+      mainButtonStyles={{backgroundColor: 'rgba(255, 47, 0, 0.7)'}}
     >
       <Action
-        text="Add Line"
-        style={{backgroundColor: 'rgba(0, 185, 0, 0.8)'}}
+        text="โทร"
+        style={{backgroundColor: '#00d'}}
+        onClick={() => {
+          Object.assign(document.createElement('a'), {
+            target: '_blank',
+            href: 'tel:0994916588'
+          }).click();
+        }}
+      >
+        <RiPhoneLine/>
+      </Action>
+      <Action
+        text="เพิ่มเพื่อน"
+        style={{backgroundColor: '#009F00'}}
         onClick={() => {
           Object.assign(document.createElement('a'), {
             target: '_blank',
@@ -22,16 +34,16 @@ export const ContactFab: React.FC = () => {
         <RiLineLine/>
       </Action>
       <Action
-        text="Call"
-        style={{backgroundColor: 'rgba(0, 0, 185, 0.8)'}}
+        text="เฟสบุ๊ค"
+        style={{backgroundColor: '#1778F2'}}
         onClick={() => {
           Object.assign(document.createElement('a'), {
             target: '_blank',
-            href: 'tel:0994916588'
+            href: 'https://web.facebook.com/ruamrat'
           }).click();
         }}
       >
-        <RiPhoneLine/>
+        <RiFacebookLine/>
       </Action>
     </Fab>
   );

@@ -29,13 +29,13 @@ export const HomeSection: React.FC = () => {
   const homeDescriptionFooter = (
     <>
       <a target="_blank" rel="noopener noreferrer" href="tel:0994916588">
-        <Button size={'large'} style={{ backgroundColor: '#0000B9', color: '#fff' }}>
+        <Button size='large' type='link' style={{ backgroundColor: '#00d', color: '#fff' }}>
           <RiPhoneLine/>
           &nbsp;099-4916588
         </Button>
       </a>&nbsp;&nbsp;
       <a target="_blank" rel="noopener noreferrer" href="https://lin.ee/2GVWsmiLd">
-        <Button size={'large'} style={{backgroundColor: '#00B900', color: '#fff'}}>
+        <Button size='large' type='link' style={{backgroundColor: '#009F00', color: '#fff'}}>
           <RiLineLine/>
           &nbsp;เพิ่มเพื่อน
         </Button>
