@@ -9,22 +9,23 @@
   font-weight: 400;
   font-size: 0.9375rem;
   line-height: 1.5;
-  border-radius: 2px;
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  border: none;
+}
+
+.Button:hover {
+  filter: brightness(120%);
 }
 
 .Button:focus,
 .Button:active {
   outline-width: 0;
-  border: none;
 }
 
 .Button-large {
+  font-weight: 800;
+  font-size: 1.2rem;
   padding: 16px;
-}
-
-.Button-link:hover {
-  background-color: #EEEEEE;
 }
 
 .Button-primary {
@@ -32,17 +33,13 @@
   color: #212121;
 }
 
-.Button-primary:hover {
-  background-color: #EEEEEE;
-}
-
 .Button-secondary {
   background-color: #212121;
   color: #FAFAFA;
 }
 
-.Button-secondary:hover {
-  background-color: #424242;
+.Button svg {
+  margin-bottom: -3px;
 }
 
 @media only screen and (min-width: 350px) {

@@ -13,7 +13,12 @@ interface ButtonProps {
 export const Button: React.FC<ButtonProps> = ({ onClick, type, style, size, className, children }) => {
   return (
     <button
-      className={`Button ${className} ${type && `Button-${type}`} ${size && `Button-${size}`}`}
+      className={[
+        'Button',
+        className ? className : '',
+        type ? `Button-${type}` : '',
+        size ? `Button-${size}` : ''
+      ].join(' ')}
       style={style}
       onClick={onClick}
     >
