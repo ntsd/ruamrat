@@ -7,7 +7,6 @@ import { DescriptionCard, DescriptionCardProps } from '../../components/Descript
 import { Image } from '../../components/Image/Image'
 import { Button } from '../../components/Button/Button'
 import './HomeSection.css'
-import { GoDownButton } from '../../components/GoDownButton/GoDownButton'
 
 export const HomeSection: React.FC = () => {
   const data = useStaticQuery(graphql`
@@ -46,12 +45,12 @@ export const HomeSection: React.FC = () => {
   const homeDescription: DescriptionCardProps = {
     title: 'รับติดตั้ง กระจก',
     title2: 'และอลูมิเนียม',
-    description: 'รับติดตั้ง-ผลิต กระจกอลูมิเนียม, มุ้งพับจีบ, มุ้งบานเลื่อน, เหล็กดัด ผลิตและติดตั้งโดยทีมช่างมืออาชีพ ชัดเจน จริงใจ ไม่เอาเปรียบลูกค้า โดย บริษัท รวมรัตน์ เอ็นจิเนียริ่ง แอนด์ ซัพพลาย จำกัด',
+    description: 'รับติดตั้ง-ผลิต กระจกอลูมิเนียม, มุ้งพับจีบ, มุ้งบานเลื่อน, เหล็กดัด และผ้าม่าน ผลิตและติดตั้งโดยทีมช่างมืออาชีพ ชัดเจน จริงใจ ไม่เอาเปรียบลูกค้า โดย บริษัท รวมรัตน์ เอ็นจิเนียริ่ง แอนด์ ซัพพลาย จำกัด',
     footer: homeDescriptionFooter
   }
 
   return (
-    <Section style={{paddingTop: '140px'}}>
+    <Section style={{paddingTop: '140px', maxHeight: '100vh'}}>
       <div className="home-container">
         <div className="item1">
           <DescriptionCard { ...homeDescription }/>
@@ -60,7 +59,6 @@ export const HomeSection: React.FC = () => {
           <Image withFrame fluid={data.allFile.edges[0].node.childImageSharp.fluid} />
         </div>
       </div>
-      <GoDownButton></GoDownButton>
     </Section>
   )
 }

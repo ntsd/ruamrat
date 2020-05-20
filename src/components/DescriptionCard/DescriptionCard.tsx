@@ -3,8 +3,8 @@ import './DescriptionCard.css';
 
 export interface DescriptionCardProps {
   title: string;
-  title2: string;
-  description: string;
+  title2?: string;
+  description: any;
   noCrown?: boolean;
   titleStyle?: object;
   footer?: any;
@@ -23,7 +23,7 @@ export const DescriptionCard: React.FC<DescriptionCardProps> = ({ title, title2,
         <h1 className="title" style={titleStyle}> {title2} </h1>
       }
       <p className='description'>{description}</p>
-      { footer }
+      <div className="footer">{ footer }</div>
     </div>
   )
 }
