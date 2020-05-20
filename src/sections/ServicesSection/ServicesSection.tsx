@@ -23,7 +23,7 @@ export const ServicesSection: React.FC = () => {
   }
 
   return (
-    <Section>
+    <Section id="servicesSection">
       <Spotlight contentPosition="bottom" style={{ backgroundImage: `url(${pic02})` }}>
         <DescriptionCard { ...homeDescription }/>
       </Spotlight>

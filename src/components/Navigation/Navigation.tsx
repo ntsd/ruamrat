@@ -1,5 +1,6 @@
 import React, { useLayoutEffect } from 'react'
 import './Navigation.css'
+import { Link } from 'react-scroll/modules';
 
 interface NavigationProps {
   siteTitle: string;
@@ -45,8 +46,20 @@ export const Navigation: React.FC<NavigationProps> = (siteTitle) => {
       <div className="cbp-af-inner">
         <div className="logo">รวมรัตน์</div>
         <nav>
-          <a href="#home">หน้าแรก</a>
-          <a href="#service">บริการ</a>
+          <Link
+            activeClass="active"
+            to="homeSection"
+            spy={true}
+            smooth={true}
+            duration={800}
+          >หน้าแรก</Link>
+          <Link
+            activeClass="active"
+            to="servicesSection"
+            spy={true}
+            smooth={true}
+            duration={800}
+          >บริการ</Link>
           <a href="#portfolio">ผลงาน</a>
           <a href="#contact">ติดต่อเรา</a>
         </nav>

@@ -50,7 +50,7 @@ export const HomeSection: React.FC = () => {
   }
 
   return (
-    <Section style={{paddingTop: '140px', maxHeight: '100vh'}}>
+    <Section id="homeSection" style={{paddingTop: '140px', maxHeight: '100vh'}}>
       <div className="home-container">
         <div className="item1">
           <DescriptionCard { ...homeDescription }/>
