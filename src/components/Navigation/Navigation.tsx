@@ -48,14 +48,14 @@ export const Navigation: React.FC<NavigationProps> = (siteTitle) => {
         <nav>
           <Link
             activeClass="active"
-            to="homeSection"
+            to="home"
             spy={true}
             smooth={true}
             duration={800}
           >หน้าแรก</Link>
           <Link
             activeClass="active"
-            to="servicesSection"
+            to="services"
             spy={true}
             smooth={true}
             duration={800}

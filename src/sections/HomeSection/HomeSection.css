@@ -1,4 +1,5 @@
 .home-container {
+  padding: 16px;
   display: grid;
   grid-template-rows: 40px 100px 1fr;
   grid-template-columns: 4fr 2fr 2fr 2fr 4fr;

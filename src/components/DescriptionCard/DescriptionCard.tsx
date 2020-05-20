@@ -8,11 +8,12 @@ export interface DescriptionCardProps {
   noCrown?: boolean;
   titleStyle?: object;
   footer?: any;
+  style?: React.CSSProperties;
 }
 
-export const DescriptionCard: React.FC<DescriptionCardProps> = ({ title, title2, description, noCrown, footer, titleStyle }) => {
+export const DescriptionCard: React.FC<DescriptionCardProps> = ({ title, title2, description, noCrown, footer, titleStyle, style }) => {
   return (
-    <div className="card-container">
+    <div className="card-container" style={style}>
       {
         !noCrown &&
         <div className="horizontal-line" />
