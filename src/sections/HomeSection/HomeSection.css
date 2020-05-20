@@ -1,5 +1,4 @@
 .home-container {
-  padding: 16px;
   display: grid;
   grid-template-rows: 40px 100px 1fr;
   grid-template-columns: 4fr 2fr 2fr 2fr 4fr;
@@ -51,7 +50,7 @@
   }
 }
 
-@media only screen and (min-width: 768px) and (max-width: 991px) {
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
   .home-container {
     grid-template-rows: 1fr 1fr;
     grid-template-columns: 1fr 1fr;

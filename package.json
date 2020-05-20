@@ -6,10 +6,12 @@
   "author": "Jirawat Boonkumnerd <jo06942@gmail.com>",
   "dependencies": {
     "@hotcode/maintenance-page": "hotcode-dev/maintenance-page",
+    "@types/animejs": "^3.1.1",
     "@types/react": "^16.9.35",
     "@types/react-dom": "^16.9.8",
     "@types/react-helmet": "^5.0.15",
     "@types/react-scroll": "^1.5.5",
+    "animejs": "^3.2.0",
     "gatsby": "^2.20.2",
     "gatsby-image": "^2.3.0",
     "gatsby-plugin-manifest": "^2.3.1",

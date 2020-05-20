@@ -51,6 +51,7 @@
   margin: 0 0 0 20px;
   font-size: 1.4em;
   position: relative;
+  cursor: pointer;
 }
 
 .cbp-af-header nav a:hover {
