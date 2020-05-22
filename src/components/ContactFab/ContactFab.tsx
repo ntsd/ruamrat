@@ -11,10 +11,10 @@ export const ContactFab: React.FC = () => {
 
   window.addEventListener('scroll', () => {
     clearTimeout(displayTimeout);
-    setDisplay('block');
+    setDisplay('none');
     displayTimeout = setTimeout(() => {
-      setDisplay('none');
-    }, 3000);
+      setDisplay('block');
+    }, 2000);
   });
 
   return (
