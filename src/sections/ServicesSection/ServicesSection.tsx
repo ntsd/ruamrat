@@ -1,12 +1,10 @@
 import React from 'react'
 
 import { Section } from '../../components/Section/Section'
-import { useStaticQuery, graphql } from 'gatsby'
-import { Image } from '../../components/Image/Image'
-import './ServicesSection.scss'
-import pic02 from '../../images/28852.jpg'
 import { Spotlight } from '../../components/Spotlight/Spotlight'
 import { DescriptionCard, DescriptionCardProps } from '../../components/DescriptionCard/DescriptionCard'
+import './ServicesSection.scss'
+import servicesPic from '../../images/services-section.jpg'
 
 export const ServicesSection: React.FC = () => {
 
@@ -24,8 +22,8 @@ export const ServicesSection: React.FC = () => {
 
   return (
     <Section id="services">
-      <Spotlight contentPosition="bottom" style={{ backgroundImage: `url(${pic02})` }}>
-        <DescriptionCard { ...homeDescription } style={{padding: '16px 32px'}}/>
+      <Spotlight contentPosition="bottom" style={{ backgroundImage: `url(${servicesPic})` }}>
+        <DescriptionCard { ...homeDescription } style={{padding: '32px'}}/>
       </Spotlight>
     </Section>
   )
