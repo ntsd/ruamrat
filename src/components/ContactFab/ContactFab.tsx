@@ -7,10 +7,13 @@ export const ContactFab: React.FC = () => {
 
   const [display, setDisplay] = useState('none');
 
+  let displayTimeout: NodeJS.Timeout;
+
   window.addEventListener('scroll', () => {
-    setDisplay('none');
-    setTimeout(() => {
-      setDisplay('unset');
+    clearTimeout(displayTimeout);
+    setDisplay('block');
+    displayTimeout = setTimeout(() => {
+      setDisplay('none');
     }, 3000);
   });
 
