@@ -2,11 +2,17 @@ import React, { useLayoutEffect } from 'react'
 import './Navigation.css'
 import { Link } from 'react-scroll/modules';
 
-interface NavigationProps {
-  siteTitle: string;
+export interface SectionLinks {
+  title: string;
+  link: string;
 }
 
-export const Navigation: React.FC<NavigationProps> = (siteTitle) => {
+interface NavigationProps {
+  siteTitle: string;
+  sectionLinks: SectionLinks[];
+}
+
+export const Navigation: React.FC<NavigationProps> = ({siteTitle, sectionLinks}) => {
 
   useLayoutEffect(() => {
     var docElem = document.documentElement,
@@ -44,24 +50,19 @@ export const Navigation: React.FC<NavigationProps> = (siteTitle) => {
   return (
     <div className="cbp-af-header">
       <div className="cbp-af-inner">
-        <div className="logo">รวมรัตน์</div>
+        <div className="logo">{siteTitle}</div>
         <nav>
-          <Link
-            activeClass="active"
-            to="home"
-            spy={true}
-            smooth={true}
-            duration={800}
-          >หน้าแรก</Link>
-          <Link
-            activeClass="active"
-            to="services"
-            spy={true}
-            smooth={true}
-            duration={800}
-          >บริการ</Link>
-          <a href="#portfolio">ผลงาน</a>
-          <a href="#contact">ติดต่อเรา</a>
+          {
+            sectionLinks.map((sectionLink: SectionLinks) => 
+              <Link
+                activeClass="active"
+                to={sectionLink.link}
+                spy={true}
+                smooth={true}
+                duration={800}
+              >{sectionLink.title}</Link>
+            )
+          }
         </nav>
       </div>
     </div>
