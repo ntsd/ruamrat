@@ -4,7 +4,7 @@ import { Section } from '../../components/Section/Section'
 import { Spotlight } from '../../components/Spotlight/Spotlight'
 import { DescriptionCard, DescriptionCardProps } from '../../components/DescriptionCard/DescriptionCard'
 import './ServicesSection.scss'
-import servicesPic from '../../images/services-section.jpg'
+import servicesPic from '../../images/gallery/28893.jpg'
 
 export const ServicesSection: React.FC = () => {
 
