@@ -22,6 +22,7 @@ export const ContactFab: React.FC = () => {
       <Fab
         icon={<RiQuestionAnswerLine />}
         mainButtonStyles={{backgroundColor: 'rgba(255, 47, 0, 0.7)'}}
+        position={{bottom: 0, right: 0}}
       >
         <Action
           text="โทร"

@@ -24,7 +24,7 @@ export const DescriptionCard: React.FC<DescriptionCardProps> = ({ title, title2,
         title2 &&
         <h1 className="title" style={titleStyle}> {title2} </h1>
       }
-      <p className={descriptionLong ? 'description-long' : 'description'}>{description}</p>
+      <p className={`description ${descriptionLong ? 'description-long' : ''}`}>{description}</p>
       <div className="footer">{ footer }</div>
     </div>
   )
