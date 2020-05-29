@@ -5,8 +5,26 @@ import { Spotlight } from '../../components/Spotlight/Spotlight'
 import { DescriptionCard, DescriptionCardProps } from '../../components/DescriptionCard/DescriptionCard'
 import './ServicesSection.scss'
 import servicesPic from '../../images/gallery/28893.jpg'
+import { useStaticQuery, graphql } from 'gatsby'
+import { Image } from '../../components/Image/Image'
 
 export const ServicesSection: React.FC = () => {
+
+  const data = useStaticQuery(graphql`
+    query {
+      allFile(filter: { name: { eq: "28929" }, sourceInstanceName: { eq: "images"}}) {
+        edges {
+          node {
+            childImageSharp {
+              fluid(maxWidth: 570) {
+                ...GatsbyImageSharpFluid
+              }
+            }
+          }
+        }
+      }
+    }
+  `)
 
   const homeDescription: DescriptionCardProps = {
     title: 'บริการของเรา',
@@ -23,7 +41,14 @@ export const ServicesSection: React.FC = () => {
   return (
     <Section id="services">
       <Spotlight contentPosition="bottom" style={{ backgroundImage: `url(${servicesPic})` }}>
-        <DescriptionCard { ...homeDescription } descriptionLong={true} style={{padding: '32px'}}/>
+        <div className="row">
+          <div className="col-xl-6" style={{marginTop: '-10vh'}}>
+            <Image withFrame fluid={data.allFile.edges[0].node.childImageSharp.fluid} />
+          </div>
+          <div className="col-xl-6">
+            <DescriptionCard { ...homeDescription } descriptionLong={true} style={{padding: '32px'}}/>
+          </div>
+        </div>
       </Spotlight>
     </Section>
   )

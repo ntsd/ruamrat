@@ -6,7 +6,7 @@ import { Footer } from '../Footer/Footer'
 import { ContactFab } from '../ContactFab/ContactFab'
 
 interface LayoutProps {
-  children: JSX.Element[];
+  children: JSX.Element[] | JSX.Element;
 }
 
 export const Layout: React.FC<LayoutProps> = ({ children }) => {
@@ -29,10 +29,10 @@ export const Layout: React.FC<LayoutProps> = ({ children }) => {
       title: 'บริการ',
       link: 'services'
     },
-    {
-      title: 'ผลงาน',
-      link: 'gallery'
-    },
+    // {
+    //   title: 'ผลงาน',
+    //   link: 'gallery'
+    // },
     {
       title: 'ติดต่อ',
       link: 'contact'
