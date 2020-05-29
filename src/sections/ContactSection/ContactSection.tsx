@@ -31,12 +31,12 @@ export const ContactSection: React.FC = () => {
     title: 'ติดต่อ',
     description: <>
       บริษัท รวมรัตน์ เอ็นจิเนียริ่ง แอนด์ซัพพลาย จำกัด <br></br>
-      293 ถนนฉลองกรุง <br></br>
-      แขวงลำผักชี เขตลาดกระบัง <br></br>
-      กรุงเทพมหานคร 10520 <br></br> <br></br>
-      โทร: 099-4916588 <br></br>
-      Line Id: @ruamrat <br></br>
-      Facebook: <a href="https://web.facebook.com/ruamrat/">Fan Page</a> <br></br>
+      293 ถนนฉลองกรุง แขวงลำผักชี <br></br>
+      เขตลาดกระบัง กรุงเทพมหานคร 10520 <br></br>
+      เวลา เปิด-ปิด: 7:30 - 17:00 นาฬิกา <br></br> <br></br>
+      โทร: <a href="https://web.facebook.com/ruamrat/"> 099-4916588 </a> <br></br>
+      Line Id: <a href="tel:0994916588"> @ruamrat </a> <br></br>
+      Facebook: <a href="https://web.facebook.com/ruamrat/"> Fan Page </a> <br></br>
     </>,
     footer: contactDescriptionFooter
   }
@@ -45,10 +45,10 @@ export const ContactSection: React.FC = () => {
     <Section id="contact">
       <div className="container">
         <div className="row">
-          <div className="col-xl-4">
+          <div className="col-xl-5">
             <DescriptionCard descriptionLong { ...contactDescription }/>
           </div>
-          <div className="col-xl-8">
+          <div className="col-xl-7">
             <GoogleMap/>
           </div>
         </div>
