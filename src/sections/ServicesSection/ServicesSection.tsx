@@ -4,7 +4,7 @@ import { Section } from '../../components/Section/Section'
 import { Spotlight } from '../../components/Spotlight/Spotlight'
 import { DescriptionCard, DescriptionCardProps } from '../../components/DescriptionCard/DescriptionCard'
 import './ServicesSection.scss'
-import servicesPic from '../../images/gallery/28893.jpg'
+import servicesPic from '../../images/28893.jpg'
 import { useStaticQuery, graphql } from 'gatsby'
 import { Image } from '../../components/Image/Image'
 
