@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useLayoutEffect } from 'react';
 import { Fab, Action } from 'react-tiny-fab';
 import 'react-tiny-fab/dist/styles.css';
 import { RiQuestionAnswerLine, RiLineLine, RiPhoneLine, RiFacebookLine } from 'react-icons/ri';
@@ -9,13 +9,15 @@ export const ContactFab: React.FC = () => {
 
   let displayTimeout: NodeJS.Timeout;
 
-  window.addEventListener('scroll', () => {
-    clearTimeout(displayTimeout);
-    setDisplay('none');
-    displayTimeout = setTimeout(() => {
-      setDisplay('block');
-    }, 2000);
-  });
+  useLayoutEffect(() => {
+    window.addEventListener('scroll', () => {
+      clearTimeout(displayTimeout);
+      setDisplay('none');
+      displayTimeout = setTimeout(() => {
+        setDisplay('block');
+      }, 2000);
+    });
+  })
 
   return (
     <div style={{display: display}}>
