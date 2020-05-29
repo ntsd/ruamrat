@@ -36,7 +36,7 @@ export const ContactSection: React.FC = () => {
       กรุงเทพมหานคร 10520 <br></br> <br></br>
       โทร: 099-4916588 <br></br>
       Line Id: @ruamrat <br></br>
-      Facebook: <a href="https://web.facebook.com/ruamrat/">Page</a> <br></br>
+      Facebook: <a href="https://web.facebook.com/ruamrat/">Fan Page</a> <br></br>
     </>,
     footer: contactDescriptionFooter
   }
