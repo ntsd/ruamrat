@@ -19,6 +19,11 @@
   font-size: 1.4rem;
   margin-right: 20vw;
   margin-top: 5vw;
+  line-height: 2rem;
+}
+
+.description-long {
+  margin-right: 2vw;
 }
 
 .footer {

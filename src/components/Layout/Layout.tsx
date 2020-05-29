@@ -1,12 +1,12 @@
 import React from 'react'
 import { graphql, useStaticQuery } from 'gatsby'
-import { Navigation } from '../Navigation/Navigation'
+import { Navigation, SectionLinks } from '../Navigation/Navigation'
 import './Layout.scss'
 import { Footer } from '../Footer/Footer'
 import { ContactFab } from '../ContactFab/ContactFab'
 
 interface LayoutProps {
-  children: JSX.Element[];
+  children: JSX.Element[] | JSX.Element;
 }
 
 export const Layout: React.FC<LayoutProps> = ({ children }) => {
@@ -14,15 +14,34 @@ export const Layout: React.FC<LayoutProps> = ({ children }) => {
     query SiteTitleQuery {
       site {
         siteMetadata {
-          title
+          brand
         }
       }
     }
   `)
+
+  const sectionLinks: SectionLinks[] = [
+    {
+      title: 'หน้าหลัก',
+      link: 'home'
+    },
+    {
+      title: 'บริการ',
+      link: 'services'
+    },
+    // {
+    //   title: 'ผลงาน',
+    //   link: 'gallery'
+    // },
+    {
+      title: 'ติดต่อ',
+      link: 'contact'
+    },
+  ];
   
   return (
     <>
-      <Navigation siteTitle={data.site.siteMetadata.title} />
+      <Navigation siteTitle={data.site.siteMetadata.brand} sectionLinks={sectionLinks} />
       { children }
       <Footer/>
       <ContactFab/>

@@ -1,14 +1,30 @@
 import React from 'react'
 
 import { Section } from '../../components/Section/Section'
-import { useStaticQuery, graphql } from 'gatsby'
-import { Image } from '../../components/Image/Image'
-import './ServicesSection.scss'
-import pic02 from '../../images/28852.jpg'
 import { Spotlight } from '../../components/Spotlight/Spotlight'
 import { DescriptionCard, DescriptionCardProps } from '../../components/DescriptionCard/DescriptionCard'
+import './ServicesSection.scss'
+import servicesPic from '../../images/gallery/28893.jpg'
+import { useStaticQuery, graphql } from 'gatsby'
+import { Image } from '../../components/Image/Image'
 
 export const ServicesSection: React.FC = () => {
+
+  const data = useStaticQuery(graphql`
+    query {
+      allFile(filter: { name: { eq: "28929" }, sourceInstanceName: { eq: "images"}}) {
+        edges {
+          node {
+            childImageSharp {
+              fluid(maxWidth: 570) {
+                ...GatsbyImageSharpFluid
+              }
+            }
+          }
+        }
+      }
+    }
+  `)
 
   const homeDescription: DescriptionCardProps = {
     title: 'บริการของเรา',
@@ -24,8 +40,15 @@ export const ServicesSection: React.FC = () => {
 
   return (
     <Section id="services">
-      <Spotlight contentPosition="bottom" style={{ backgroundImage: `url(${pic02})` }}>
-        <DescriptionCard { ...homeDescription } style={{padding: '16px 32px'}}/>
+      <Spotlight contentPosition="bottom" style={{ backgroundImage: `url(${servicesPic})` }}>
+        <div className="row">
+          <div className="col-xl-6" style={{marginTop: '-10vh'}}>
+            <Image withFrame fluid={data.allFile.edges[0].node.childImageSharp.fluid} />
+          </div>
+          <div className="col-xl-6">
+            <DescriptionCard { ...homeDescription } descriptionLong={true} style={{padding: '32px'}}/>
+          </div>
+        </div>
       </Spotlight>
     </Section>
   )
