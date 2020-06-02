@@ -1,15 +1,15 @@
-import React from 'react'
-import { graphql, useStaticQuery } from 'gatsby'
-import { Navigation, SectionLinks } from '../Navigation/Navigation'
-import './Layout.scss'
-import { Footer } from '../Footer/Footer'
-import { ContactFab } from '../ContactFab/ContactFab'
+import React from 'react';
+import {graphql, useStaticQuery} from 'gatsby';
+import {Navigation, SectionLinks} from '../Navigation/Navigation';
+import './Layout.scss';
+import {Footer} from '../Footer/Footer';
+import {ContactFab} from '../ContactFab/ContactFab';
 
 interface LayoutProps {
   children: JSX.Element[] | JSX.Element;
 }
 
-export const Layout: React.FC<LayoutProps> = ({ children }) => {
+export const Layout: React.FC<LayoutProps> = ({children}) => {
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
       site {
@@ -18,16 +18,16 @@ export const Layout: React.FC<LayoutProps> = ({ children }) => {
         }
       }
     }
-  `)
+  `);
 
   const sectionLinks: SectionLinks[] = [
     {
       title: 'หน้าหลัก',
-      link: 'home'
+      link: 'home',
     },
     {
       title: 'บริการ',
-      link: 'services'
+      link: 'services',
     },
     // {
     //   title: 'ผลงาน',
@@ -35,16 +35,19 @@ export const Layout: React.FC<LayoutProps> = ({ children }) => {
     // },
     {
       title: 'ติดต่อ',
-      link: 'contact'
+      link: 'contact',
     },
   ];
-  
+
   return (
     <>
-      <Navigation siteTitle={data.site.siteMetadata.brand} sectionLinks={sectionLinks} />
-      { children }
-      <Footer/>
-      <ContactFab/>
+      <Navigation
+        siteTitle={data.site.siteMetadata.brand}
+        sectionLinks={sectionLinks}
+      />
+      {children}
+      <Footer />
+      <ContactFab />
     </>
-  )
-}
+  );
+};
