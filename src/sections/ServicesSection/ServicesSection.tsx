@@ -1,13 +1,11 @@
 import React from 'react';
 
 import {Section} from '../../components/Section/Section';
-import {Spotlight} from '../../components/Spotlight/Spotlight';
 import {
   DescriptionCard,
   DescriptionCardProps,
 } from '../../components/DescriptionCard/DescriptionCard';
 import './ServicesSection.scss';
-import servicesPic from '../../images/28893.jpg';
 import {useStaticQuery, graphql} from 'gatsby';
 import {Image} from '../../components/Image/Image';
 
@@ -44,26 +42,19 @@ export const ServicesSection: React.FC = () => {
 
   return (
     <Section id="services">
-      <Spotlight
-        contentPosition="bottom"
-        style={{backgroundImage: `url(${servicesPic})`}}
-      >
+      <div className="container">
         <div className="row">
-          <div className="col-xl-6" style={{marginTop: '-10vh'}}>
+          <div className="col-xl-7">
             <Image
               withFrame
               fluid={data.allFile.edges[0].node.childImageSharp.fluid}
             />
           </div>
-          <div className="col-xl-6">
-            <DescriptionCard
-              {...homeDescription}
-              descriptionLong={true}
-              style={{padding: '32px'}}
-            />
+          <div className="col-xl-5" style={{paddingTop: '10vh'}}>
+            <DescriptionCard {...homeDescription} descriptionLong={true} />
           </div>
         </div>
-      </Spotlight>
+      </div>
     </Section>
   );
 };

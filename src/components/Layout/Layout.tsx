@@ -29,10 +29,10 @@ export const Layout: React.FC<LayoutProps> = ({children}) => {
       title: 'บริการ',
       link: 'services',
     },
-    // {
-    //   title: 'ผลงาน',
-    //   link: 'gallery'
-    // },
+    {
+      title: 'ผลงาน',
+      link: 'gallery',
+    },
     {
       title: 'ติดต่อ',
       link: 'contact',

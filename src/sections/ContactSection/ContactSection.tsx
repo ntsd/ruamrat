@@ -15,22 +15,21 @@ export const ContactSection: React.FC = () => {
     <>
       <a target="_blank" rel="noopener noreferrer" href="tel:0994916588">
         <Button
-          size="large"
+          size="small"
           type="link"
           style={{backgroundColor: '#00d', color: '#fff'}}
         >
           <RiPhoneLine />
-          &nbsp;099-4916588
+          &nbsp;โทรเลย
         </Button>
       </a>
-      &nbsp;&nbsp;
       <a
         target="_blank"
         rel="noopener noreferrer"
         href="https://lin.ee/2GVWsmiLd"
       >
         <Button
-          size="large"
+          size="small"
           type="link"
           style={{backgroundColor: '#009F00', color: '#fff'}}
         >
@@ -49,13 +48,11 @@ export const ContactSection: React.FC = () => {
         293 ถนนฉลองกรุง แขวงลำผักชี <br></br>
         เขตลาดกระบัง กรุงเทพมหานคร 10520 <br></br>
         เวลา เปิด-ปิด: 7:30 - 17:00 นาฬิกา <br></br> <br></br>
-        โทร: <a href="https://web.facebook.com/ruamrat/"> 099-4916588 </a>{' '}
+        โทร: <a href="tel:0994916588"> 099-4916588</a>
         <br></br>
-        Line Id: <a href="tel:0994916588"> @ruamrat </a> <br></br>
-        Facebook: <a href="https://web.facebook.com/ruamrat/">
-          {' '}
-          Fan Page{' '}
-        </a>{' '}
+        Line: <a href="https://lin.ee/2GVWsmiLd"> @ruamrat</a>
+        <br></br>
+        Facebook: <a href="https://web.facebook.com/ruamrat/"> แฟนเพจของเรา</a>
         <br></br>
       </>
     ),

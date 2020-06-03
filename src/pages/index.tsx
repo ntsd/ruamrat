@@ -4,7 +4,7 @@ import {Seo} from '../components/Seo/Seo';
 import {HomeSection} from '../sections/HomeSection/HomeSection';
 import {ServicesSection} from '../sections/ServicesSection/ServicesSection';
 import {ContactSection} from '../sections/ContactSection/ContactSection';
-// import { GallerySection } from '../sections/GallerySection/GallerySection'
+import {GallerySection} from '../sections/GallerySection/GallerySection';
 
 const IndexPage = () => {
   return (
@@ -16,7 +16,7 @@ const IndexPage = () => {
       />
       <HomeSection />
       <ServicesSection />
-      {/* <GallerySection/> */}
+      <GallerySection />
       <ContactSection />
     </Layout>
   );
