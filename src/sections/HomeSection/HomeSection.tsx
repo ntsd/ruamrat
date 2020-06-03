@@ -10,6 +10,7 @@ import {
 import {Image} from '../../components/Image/Image';
 import {Button} from '../../components/Button/Button';
 import './HomeSection.css';
+import {Parallax} from 'react-scroll-parallax';
 
 export const HomeSection: React.FC = () => {
   const data = useStaticQuery(graphql`
@@ -34,7 +35,7 @@ export const HomeSection: React.FC = () => {
     <>
       <a target="_blank" rel="noopener noreferrer" href="tel:0994916588">
         <Button
-          size="small"
+          size="large"
           type="link"
           style={{backgroundColor: '#00d', color: '#fff'}}
         >
@@ -48,7 +49,7 @@ export const HomeSection: React.FC = () => {
         href="https://lin.ee/2GVWsmiLd"
       >
         <Button
-          size="small"
+          size="large"
           type="link"
           style={{backgroundColor: '#009F00', color: '#fff'}}
         >
@@ -74,10 +75,12 @@ export const HomeSection: React.FC = () => {
           <DescriptionCard {...homeDescription} />
         </div>
         <div className="item2">
-          <Image
-            withFrame
-            fluid={data.allFile.edges[0].node.childImageSharp.fluid}
-          />
+          <Parallax y={[0, 20]}>
+            <Image
+              withFrame
+              fluid={data.allFile.edges[0].node.childImageSharp.fluid}
+            />
+          </Parallax>
         </div>
       </div>
     </Section>

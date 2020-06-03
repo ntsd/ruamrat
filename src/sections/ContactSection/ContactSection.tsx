@@ -15,7 +15,7 @@ export const ContactSection: React.FC = () => {
     <>
       <a target="_blank" rel="noopener noreferrer" href="tel:0994916588">
         <Button
-          size="small"
+          size="large"
           type="link"
           style={{backgroundColor: '#00d', color: '#fff'}}
         >
@@ -29,7 +29,7 @@ export const ContactSection: React.FC = () => {
         href="https://lin.ee/2GVWsmiLd"
       >
         <Button
-          size="small"
+          size="large"
           type="link"
           style={{backgroundColor: '#009F00', color: '#fff'}}
         >

@@ -4,6 +4,7 @@ import {Navigation, SectionLinks} from '../Navigation/Navigation';
 import './Layout.scss';
 import {Footer} from '../Footer/Footer';
 import {ContactFab} from '../ContactFab/ContactFab';
+import {ParallaxProvider} from 'react-scroll-parallax';
 
 interface LayoutProps {
   children: JSX.Element[] | JSX.Element;
@@ -40,7 +41,7 @@ export const Layout: React.FC<LayoutProps> = ({children}) => {
   ];
 
   return (
-    <>
+    <ParallaxProvider>
       <Navigation
         siteTitle={data.site.siteMetadata.brand}
         sectionLinks={sectionLinks}
@@ -48,6 +49,6 @@ export const Layout: React.FC<LayoutProps> = ({children}) => {
       {children}
       <Footer />
       <ContactFab />
-    </>
+    </ParallaxProvider>
   );
 };
