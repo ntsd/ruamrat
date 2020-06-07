@@ -10,7 +10,7 @@ import {
 import {Image} from '../../components/Image/Image';
 import {Button} from '../../components/Button/Button';
 import './HomeSection.css';
-import {Parallax} from 'react-scroll-parallax';
+import {Parallax} from '../../components/Parallax/Parallax';
 
 export const HomeSection: React.FC = () => {
   const data = useStaticQuery(graphql`
@@ -72,10 +72,12 @@ export const HomeSection: React.FC = () => {
     <Section id="home" style={{paddingTop: '140px'}}>
       <div className="home-container">
         <div className="item1">
-          <DescriptionCard {...homeDescription} />
+          <Parallax y={[-50, 50]}>
+            <DescriptionCard {...homeDescription} />
+          </Parallax>
         </div>
         <div className="item2">
-          <Parallax y={[0, 20]}>
+          <Parallax y={[0, 0]}>
             <Image
               withFrame
               fluid={data.allFile.edges[0].node.childImageSharp.fluid}

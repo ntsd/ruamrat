@@ -8,7 +8,7 @@ import {
 import './ServicesSection.scss';
 import {useStaticQuery, graphql} from 'gatsby';
 import {Image} from '../../components/Image/Image';
-import {Parallax} from 'react-scroll-parallax';
+import {Parallax} from '../../components/Parallax/Parallax';
 
 export const ServicesSection: React.FC = () => {
   const data = useStaticQuery(graphql`
@@ -46,7 +46,7 @@ export const ServicesSection: React.FC = () => {
       <div className="container">
         <div className="row">
           <div className="col-xl-7">
-            <Parallax y={[-20, 20]}>
+            <Parallax y={[0, 0]}>
               <Image
                 withFrame
                 fluid={data.allFile.edges[0].node.childImageSharp.fluid}
@@ -54,7 +54,9 @@ export const ServicesSection: React.FC = () => {
             </Parallax>
           </div>
           <div className="col-xl-5" style={{paddingTop: '10vh'}}>
-            <DescriptionCard {...homeDescription} descriptionLong={true} />
+            <Parallax y={[0, 60]}>
+              <DescriptionCard {...homeDescription} descriptionLong={true} />
+            </Parallax>
           </div>
         </div>
       </div>

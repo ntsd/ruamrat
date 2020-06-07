@@ -28,7 +28,7 @@ export const Navigation: React.FC<NavigationProps> = ({
         () => {
           if (!didScroll) {
             didScroll = true;
-            setTimeout(scrollPage, 250);
+            scrollPage();
           }
         },
         false
