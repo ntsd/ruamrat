@@ -1,7 +1,7 @@
 import React from 'react';
 import Img from 'gatsby-image';
 import './Grid.css';
-import {Parallax} from 'react-scroll-parallax';
+import {Parallax} from '../Parallax/Parallax';
 
 function shuffle(array: any[]) {
   array.sort(() => Math.random() - 0.5);
@@ -26,7 +26,7 @@ export const Grid: React.FC<GridProps> = ({items, pageNumber}) => {
           node.childImageSharp.fluid.src.includes(`page-${pageNumber}-grid`)
         )
         .map(({node}) => {
-          const randomNumber = randomInteger(0, 50);
+          const randomNumber = randomInteger(0, 70);
           const y_top = 0;
           const y_bottom = randomNumber;
           return (

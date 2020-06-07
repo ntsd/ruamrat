@@ -9,6 +9,7 @@ import {CATAGORIES} from './Gallery.json';
 import {Grid} from '../../components/Grid/Grid';
 import {Image} from '../../components/Image/Image';
 import {IndexCard} from '../../components/IndexCard/IndexCard';
+import {Parallax} from '../../components/Parallax/Parallax';
 
 export const GallerySection: React.FC = () => {
   const data = useStaticQuery(graphql`
@@ -123,11 +124,13 @@ export const GallerySection: React.FC = () => {
         </div>
 
         <div className="card">
-          <DescriptionCard
-            longDescription
-            title={getPage().title}
-            description={getPage().description}
-          />
+          <Parallax y={[0, 100]}>
+            <DescriptionCard
+              longDescription
+              title={getPage().title}
+              description={getPage().description}
+            />
+          </Parallax>
         </div>
 
         <div className="btn-container">
