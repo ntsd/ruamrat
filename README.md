@@ -32,16 +32,24 @@ Secondary: #ffdd00
 
 ## Examples Sites
 
-https://www.scinterbuilt.co.th/
-https://www.passorn-steel.com/
-http://www.thanachai-glass.com/aluminum/
-http://www.194aluminium.com
-http://www.mjglassaluminium.com
-http://www.jj-aluminum.co.th/index.html
+<https://www.scinterbuilt.co.th/>
+
+<https://www.passorn-steel.com/>
+
+<http://www.thanachai-glass.com/aluminum/>
+
+<http://www.194aluminium.com>
+
+<http://www.mjglassaluminium.com>
+
+<http://www.jj-aluminum.co.th/index.html>
 
 ## Design
 
-https://www.awwwards.com/awwwards/collections/image-gallery-and-slideshows/
-https://www.newlegend4x4.com/
-http://leclercqassocies.fr/?home
-https://www.adtile.me/
+<https://www.awwwards.com/awwwards/collections/image-gallery-and-slideshows/>
+
+<https://www.newlegend4x4.com/>
+
+<http://leclercqassocies.fr/?home>
+
+<https://www.adtile.me/>

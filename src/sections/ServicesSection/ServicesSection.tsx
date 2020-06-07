@@ -1,18 +1,21 @@
-import React from 'react'
+import React from 'react';
 
-import { Section } from '../../components/Section/Section'
-import { Spotlight } from '../../components/Spotlight/Spotlight'
-import { DescriptionCard, DescriptionCardProps } from '../../components/DescriptionCard/DescriptionCard'
-import './ServicesSection.scss'
-import servicesPic from '../../images/28893.jpg'
-import { useStaticQuery, graphql } from 'gatsby'
-import { Image } from '../../components/Image/Image'
+import {Section} from '../../components/Section/Section';
+import {
+  DescriptionCard,
+  DescriptionCardProps,
+} from '../../components/DescriptionCard/DescriptionCard';
+import './ServicesSection.scss';
+import {useStaticQuery, graphql} from 'gatsby';
+import {Image} from '../../components/Image/Image';
+import {Parallax} from '../../components/Parallax/Parallax';
 
 export const ServicesSection: React.FC = () => {
-
   const data = useStaticQuery(graphql`
     query {
-      allFile(filter: { name: { eq: "28929" }, sourceInstanceName: { eq: "images"}}) {
+      allFile(
+        filter: {name: {eq: "28929"}, sourceInstanceName: {eq: "images"}}
+      ) {
         edges {
           node {
             childImageSharp {
@@ -24,32 +27,39 @@ export const ServicesSection: React.FC = () => {
         }
       }
     }
-  `)
+  `);
 
   const homeDescription: DescriptionCardProps = {
     title: 'บริการของเรา',
-    description: <>
-      - กระจกอลูมิเนียม <br></br>
-      - มุ้งลวด, มุ้งพับจีบ, มุ้งบานเลื่อน  <br></br>
-      - เหล็กดัด และ อลูมิเนียมเส้น <br></br>
-      - ผ้าม่าน <br></br>
-      - อุปกรณ์ สำหรับงานกระจก และ อลูมิเนียม <br></br>
-      - บริการติดตั้ง จำหน่าย และ ผลิต
-    </>
-  }
+    description: (
+      <>
+        - กระจกอลูมิเนียม <br></br>- มุ้งลวด, มุ้งพับจีบ, มุ้งบานเลื่อน
+        <br></br>- เหล็กดัด, อลูมิเนียมเส้น <br></br>- ผ้าม่านจีบ, ผ้าม่านตาไก่
+        <br></br>- อุปกรณ์ สำหรับงานกระจกและอลูมิเนียม <br></br>- บริการติดตั้ง
+        จำหน่าย และ ผลิต
+      </>
+    ),
+  };
 
   return (
     <Section id="services">
-      <Spotlight contentPosition="bottom" style={{ backgroundImage: `url(${servicesPic})` }}>
+      <div className="container">
         <div className="row">
-          <div className="col-xl-6" style={{marginTop: '-10vh'}}>
-            <Image withFrame fluid={data.allFile.edges[0].node.childImageSharp.fluid} />
+          <div className="col-xl-7">
+            <Parallax y={[0, 0]}>
+              <Image
+                withFrame
+                fluid={data.allFile.edges[0].node.childImageSharp.fluid}
+              />
+            </Parallax>
           </div>
-          <div className="col-xl-6">
-            <DescriptionCard { ...homeDescription } descriptionLong={true} style={{padding: '32px'}}/>
+          <div className="col-xl-5" style={{paddingTop: '10vh'}}>
+            <Parallax y={[-30, 30]}>
+              <DescriptionCard {...homeDescription} longDescription />
+            </Parallax>
           </div>
         </div>
-      </Spotlight>
+      </div>
     </Section>
-  )
-}
+  );
+};
