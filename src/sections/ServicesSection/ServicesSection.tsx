@@ -33,10 +33,10 @@ export const ServicesSection: React.FC = () => {
     title: 'บริการของเรา',
     description: (
       <>
-        - กระจกอลูมิเนียม <br></br>- มุ้งลวด, มุ้งพับจีบ, มุ้งบานเลื่อน{' '}
-        <br></br>- เหล็กดัด และ อลูมิเนียมเส้น <br></br>- ผ้าม่าน <br></br>-
-        อุปกรณ์ สำหรับงานกระจก และ อลูมิเนียม <br></br>- บริการติดตั้ง จำหน่าย
-        และ ผลิต
+        - กระจกอลูมิเนียม <br></br>- มุ้งลวด, มุ้งพับจีบ, มุ้งบานเลื่อน
+        <br></br>- เหล็กดัด, อลูมิเนียมเส้น <br></br>- ผ้าม่านจีบ, ผ้าม่านตาไก่
+        <br></br>- อุปกรณ์ สำหรับงานกระจกและอลูมิเนียม <br></br>- บริการติดตั้ง
+        จำหน่าย และ ผลิต
       </>
     ),
   };
@@ -55,7 +55,7 @@ export const ServicesSection: React.FC = () => {
           </div>
           <div className="col-xl-5" style={{paddingTop: '10vh'}}>
             <Parallax y={[0, 60]}>
-              <DescriptionCard {...homeDescription} descriptionLong={true} />
+              <DescriptionCard {...homeDescription} longDescription />
             </Parallax>
           </div>
         </div>

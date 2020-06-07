@@ -64,7 +64,7 @@ export const ContactSection: React.FC = () => {
       <div className="container">
         <div className="row">
           <div className="col-xl-5">
-            <DescriptionCard descriptionLong {...contactDescription} />
+            <DescriptionCard longDescription {...contactDescription} />
           </div>
           <div className="col-xl-7">
             <GoogleMap />

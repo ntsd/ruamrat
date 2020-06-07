@@ -5,7 +5,7 @@ export interface DescriptionCardProps {
   title: string;
   title2?: string;
   description: any;
-  descriptionLong?: boolean;
+  longDescription?: boolean;
   noCrown?: boolean;
   titleStyle?: object;
   footer?: any;
@@ -20,7 +20,7 @@ export const DescriptionCard: React.FC<DescriptionCardProps> = ({
   footer,
   titleStyle,
   style,
-  descriptionLong = false,
+  longDescription = false,
 }) => {
   return (
     <div className="card-container" style={style}>
@@ -35,7 +35,7 @@ export const DescriptionCard: React.FC<DescriptionCardProps> = ({
           {title2}{' '}
         </h1>
       )}
-      <p className={`description ${descriptionLong ? 'description-long' : ''}`}>
+      <p className={`description ${longDescription ? 'description-long' : ''}`}>
         {description}
       </p>
       <div className="footer">{footer}</div>
