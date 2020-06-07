@@ -8,14 +8,14 @@ import './GallerySection.css';
 import {CATAGORIES} from './Gallery.json';
 import {Grid} from '../../components/Grid/Grid';
 import {Image} from '../../components/Image/Image';
-import { IndexCard } from '../../components/IndexCard/IndexCard';
+import {IndexCard} from '../../components/IndexCard/IndexCard';
 
 export const GallerySection: React.FC = () => {
   const data = useStaticQuery(graphql`
     query {
       gridImages: allFile(
         filter: {
-          name: {regex: "/page-1-grid-*/"}
+          name: {regex: "/page-[0-9]-grid-*/"}
           extension: {regex: "/(jpeg|jpg|gif|png)/"}
           sourceInstanceName: {eq: "images"}
         }
@@ -109,6 +109,9 @@ export const GallerySection: React.FC = () => {
 
   return (
     <Section id="gallery">
+      <div style={{textAlign: 'center', marginTop: '2vw', marginBottom: '2vw'}}>
+        <h1 className="title">ผลงานของเรา</h1>
+      </div>
       <div className="collection-page-container">
         <div className="thumb-container">
           <Image fluid={getThumbImage().node.childImageSharp.fluid} />
@@ -145,7 +148,7 @@ export const GallerySection: React.FC = () => {
         </div>
 
         <div className="image-grid">
-          <Grid items={data.gridImages.edges} />
+          <Grid items={data.gridImages.edges} pageNumber={page + 1} />
         </div>
       </div>
     </Section>

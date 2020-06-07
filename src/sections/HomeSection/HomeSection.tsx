@@ -69,10 +69,10 @@ export const HomeSection: React.FC = () => {
   };
 
   return (
-    <Section id="home" style={{paddingTop: '140px'}}>
-      <div className="home-container">
+    <Section id="home">
+      <div className="home-container" style={{paddingTop: '70px'}}>
         <div className="item1">
-          <Parallax y={[-50, 50]}>
+          <Parallax y={[-20, 30]}>
             <DescriptionCard {...homeDescription} />
           </Parallax>
         </div>

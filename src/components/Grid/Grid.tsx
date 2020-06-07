@@ -8,18 +8,25 @@ function shuffle(array: any[]) {
 
 interface GridProps {
   items: any[];
+  pageNumber: number;
 }
 
-export const Grid: React.FC<GridProps> = ({items}) => {
+export const Grid: React.FC<GridProps> = ({items, pageNumber}) => {
   shuffle(items);
 
   return (
     <div className="grid-container">
-      {items.map(({node, index}) => (
-        <GridItem key={index}>
-          <Img fluid={node.childImageSharp.fluid} />
-        </GridItem>
-      ))}
+      {items
+        .filter(({node}) =>
+          node.childImageSharp.fluid.src.includes(`page-${pageNumber}-grid`)
+        )
+        .map(({node}) => {
+          return (
+            <GridItem key={node.childImageSharp.fluid.src}>
+              <Img fluid={node.childImageSharp.fluid} />
+            </GridItem>
+          );
+        })}
     </div>
   );
 };

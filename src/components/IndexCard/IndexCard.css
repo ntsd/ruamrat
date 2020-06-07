@@ -2,7 +2,7 @@
   width: 300px;
   height: 300px;
   opacity: 0.9;
-  background-color: #FFA726;
+  background-color: rgba(255, 47, 0, 0.8);;
   color: white;
   display: flex;
   justify-content: space-between;

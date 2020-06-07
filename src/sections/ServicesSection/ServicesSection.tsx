@@ -54,7 +54,7 @@ export const ServicesSection: React.FC = () => {
             </Parallax>
           </div>
           <div className="col-xl-5" style={{paddingTop: '10vh'}}>
-            <Parallax y={[0, 60]}>
+            <Parallax y={[-30, 30]}>
               <DescriptionCard {...homeDescription} longDescription />
             </Parallax>
           </div>
