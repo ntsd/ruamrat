@@ -26,15 +26,9 @@ export const DescriptionCard: React.FC<DescriptionCardProps> = ({
     <div className="card-container" style={style}>
       {!noCrown && <div className="horizontal-line" />}
       <h1 className="title" style={titleStyle}>
-        {' '}
-        {title}{' '}
+        <div>{title}</div>
+        <div>{title2}</div>
       </h1>
-      {title2 && (
-        <h1 className="title" style={titleStyle}>
-          {' '}
-          {title2}{' '}
-        </h1>
-      )}
       <p className={`description ${longDescription ? 'description-long' : ''}`}>
         {description}
       </p>
