@@ -1,9 +1,14 @@
 import React from 'react';
 import Img from 'gatsby-image';
 import './Grid.css';
+import {Parallax} from 'react-scroll-parallax';
 
 function shuffle(array: any[]) {
   array.sort(() => Math.random() - 0.5);
+}
+
+function randomInteger(min: number, max: number) {
+  return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
 interface GridProps {
@@ -21,10 +26,18 @@ export const Grid: React.FC<GridProps> = ({items, pageNumber}) => {
           node.childImageSharp.fluid.src.includes(`page-${pageNumber}-grid`)
         )
         .map(({node}) => {
+          const randomNumber = randomInteger(0, 50);
+          const y_top = 0;
+          const y_bottom = randomNumber;
           return (
-            <GridItem key={node.childImageSharp.fluid.src}>
-              <Img fluid={node.childImageSharp.fluid} />
-            </GridItem>
+            <Parallax
+              y={[y_top, y_bottom]}
+              key={node.childImageSharp.fluid.src}
+            >
+              <GridItem>
+                <Img fluid={node.childImageSharp.fluid} />
+              </GridItem>
+            </Parallax>
           );
         })}
     </div>
