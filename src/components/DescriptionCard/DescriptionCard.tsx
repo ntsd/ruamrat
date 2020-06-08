@@ -10,6 +10,7 @@ export interface DescriptionCardProps {
   titleStyle?: object;
   footer?: any;
   style?: React.CSSProperties;
+  isHeader?: boolean;
 }
 
 export const DescriptionCard: React.FC<DescriptionCardProps> = ({
@@ -21,14 +22,23 @@ export const DescriptionCard: React.FC<DescriptionCardProps> = ({
   titleStyle,
   style,
   longDescription = false,
+  isHeader = false,
 }) => {
   return (
     <div className="card-container" style={style}>
       {!noCrown && <div className="horizontal-line" />}
-      <h1 className="title" style={titleStyle}>
-        <div>{title}</div>
-        <div>{title2}</div>
-      </h1>
+      {isHeader ? (
+        <h1 className="title" style={titleStyle}>
+          <div>{title}</div>
+          <div>{title2}</div>
+        </h1>
+      ) : (
+        <div className="title" style={titleStyle}>
+          <div>{title}</div>
+          <div>{title2}</div>
+        </div>
+      )}
+
       <p className={`description ${longDescription ? 'description-long' : ''}`}>
         {description}
       </p>
