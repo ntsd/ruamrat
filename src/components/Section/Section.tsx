@@ -1,5 +1,5 @@
-import React from 'react'
-import "./Section.css"
+import React from 'react';
+import './Section.css';
 
 interface SectionProps {
   id: string;
@@ -7,8 +7,13 @@ interface SectionProps {
   className?: string;
 }
 
-export const Section: React.FC<SectionProps> = ({ children, id, style, className = '' }) => (
+export const Section: React.FC<SectionProps> = ({
+  children,
+  id,
+  style,
+  className = '',
+}) => (
   <section id={id} className={className + ' section'} style={style}>
-    { children }
+    {children}
   </section>
-)
+);
