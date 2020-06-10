@@ -15,10 +15,10 @@ export const Footer: React.FC<FooterProps> = ({sectionLinks}) => {
       <div className="container footer-container">
         <div className="row" style={{textAlign: 'center'}}>
           <div className="col-sm-6" style={{paddingTop: '60px'}}>
-            <h2>Links</h2>
+            <div>Links</div>
             {sectionLinks.map((sectionLink: SectionLinks) => (
               <Link to={'/#' + sectionLink.link} key={sectionLink.link}>
-                {sectionLink.title}
+                <div>{sectionLink.title}</div>
               </Link>
             ))}
           </div>

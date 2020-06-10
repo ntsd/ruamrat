@@ -11,8 +11,8 @@ Secondary: #ffdd00
 ### 1. Components
 
 - Carousel
-- Gallery Page ผลงาน
-  
+- Gallery Page split Category
+
 ## SEO
 
 ### Keywords
