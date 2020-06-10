@@ -26,9 +26,8 @@ export const Grid: React.FC<GridProps> = ({items, pageNumber}) => {
           node.childImageSharp.fluid.src.includes(`page-${pageNumber}-grid`)
         )
         .map(({node}) => {
-          const randomNumber = randomInteger(0, 70);
-          const y_top = 0;
-          const y_bottom = randomNumber;
+          const y_top = randomInteger(-5, 0);
+          const y_bottom = randomInteger(0, 70);
           return (
             <Parallax
               y={[y_top, y_bottom]}

@@ -77,12 +77,10 @@ export const HomeSection: React.FC = () => {
           </Parallax>
         </div>
         <div className="item2">
-          <Parallax y={[0, 0]}>
-            <Image
-              withFrame
-              fluid={data.allFile.edges[0].node.childImageSharp.fluid}
-            />
-          </Parallax>
+          <Image
+            withFrame
+            fluid={data.allFile.edges[0].node.childImageSharp.fluid}
+          />
         </div>
       </div>
     </Section>

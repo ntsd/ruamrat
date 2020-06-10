@@ -46,12 +46,10 @@ export const ServicesSection: React.FC = () => {
       <div className="container">
         <div className="row">
           <div className="col-xl-7">
-            <Parallax y={[0, 0]}>
-              <Image
-                withFrame
-                fluid={data.allFile.edges[0].node.childImageSharp.fluid}
-              />
-            </Parallax>
+            <Image
+              withFrame
+              fluid={data.allFile.edges[0].node.childImageSharp.fluid}
+            />
           </div>
           <div className="col-xl-5" style={{paddingTop: '10vh'}}>
             <Parallax y={[-30, 30]}>
