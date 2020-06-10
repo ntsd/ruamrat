@@ -110,9 +110,6 @@ export const GallerySection: React.FC = () => {
 
   return (
     <Section id="gallery">
-      <div style={{textAlign: 'center', marginTop: '2vw', marginBottom: '2vw'}}>
-        <h2 className="title">ผลงานของเรา</h2>
-      </div>
       <div className="collection-page-container">
         <div className="thumb-container">
           <Image fluid={getThumbImage().node.childImageSharp.fluid} />

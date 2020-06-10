@@ -18,6 +18,7 @@ export const Image: React.FC<ImageProps> = ({
       className={`${withFrame && 'img-frame'}`}
       fluid={fluid}
       style={style}
+      title="รวมรัตน์ กระจกอลูมิเนียม กระจก อลูมิเนียม"
       alt="รวมรัตน์ กระจกอลูมิเนียม กระจก อลูมิเนียม"
     />
   );

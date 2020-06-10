@@ -30,7 +30,7 @@ export const ServicesSection: React.FC = () => {
   `);
 
   const homeDescription: DescriptionCardProps = {
-    title: 'บริการของเรา',
+    title: 'บริการ',
     description: (
       <>
         - กระจกอลูมิเนียม <br></br>- มุ้งลวด, มุ้งพับจีบ, มุ้งบานเลื่อน
