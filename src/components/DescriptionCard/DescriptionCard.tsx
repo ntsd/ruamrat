@@ -33,10 +33,10 @@ export const DescriptionCard: React.FC<DescriptionCardProps> = ({
           <div>{title2}</div>
         </h1>
       ) : (
-        <div className="title" style={titleStyle}>
+        <h2 className="title" style={titleStyle}>
           <div>{title}</div>
           <div>{title2}</div>
-        </div>
+        </h2>
       )}
 
       <p className={`description ${longDescription ? 'description-long' : ''}`}>
