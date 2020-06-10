@@ -47,7 +47,7 @@ export const Layout: React.FC<LayoutProps> = ({children}) => {
         sectionLinks={sectionLinks}
       />
       {children}
-      <Footer />
+      <Footer sectionLinks={sectionLinks} />
       <ContactFab />
     </ParallaxProvider>
   );
