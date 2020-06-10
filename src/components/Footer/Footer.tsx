@@ -2,7 +2,7 @@ import React from 'react';
 import {FacebookPage} from '../FacebookPage/FacebookPage';
 import {Section} from '../Section/Section';
 import {SectionLinks} from '../Navigation/Navigation';
-import {Link} from 'react-scroll';
+import {Link} from 'gatsby';
 import './Footer.scss';
 
 interface FooterProps {
@@ -17,13 +17,7 @@ export const Footer: React.FC<FooterProps> = ({sectionLinks}) => {
           <div className="col-sm-6" style={{paddingTop: '60px'}}>
             <h2>Links</h2>
             {sectionLinks.map((sectionLink: SectionLinks) => (
-              <Link
-                to={sectionLink.link}
-                spy={true}
-                smooth={true}
-                duration={800}
-                key={sectionLink.link}
-              >
+              <Link to={'/#' + sectionLink.link} key={sectionLink.link}>
                 <h3>{sectionLink.title}</h3>
               </Link>
             ))}

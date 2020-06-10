@@ -1,5 +1,5 @@
 import React from 'react';
-import Img from 'gatsby-image';
+import {Image} from '../../components/Image/Image';
 import './Grid.css';
 import {Parallax} from '../Parallax/Parallax';
 
@@ -34,7 +34,7 @@ export const Grid: React.FC<GridProps> = ({items, pageNumber}) => {
               key={node.childImageSharp.fluid.src}
             >
               <GridItem>
-                <Img fluid={node.childImageSharp.fluid} />
+                <Image fluid={node.childImageSharp.fluid} />
               </GridItem>
             </Parallax>
           );

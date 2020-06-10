@@ -1,6 +1,7 @@
 import React, {useLayoutEffect} from 'react';
 import './Navigation.css';
-import {Link} from 'react-scroll/modules';
+import {Link as ScrollLink} from 'react-scroll/modules';
+import {Link} from 'gatsby';
 
 export interface SectionLinks {
   title: string;
@@ -55,10 +56,12 @@ export const Navigation: React.FC<NavigationProps> = ({
   return (
     <div className="cbp-af-header">
       <div className="cbp-af-inner">
-        <div className="logo">{siteTitle}</div>
+        <div className="logo">
+          <Link to="/">{siteTitle}</Link>
+        </div>
         <nav>
           {sectionLinks.map((sectionLink: SectionLinks) => (
-            <Link
+            <ScrollLink
               activeClass="active"
               to={sectionLink.link}
               spy={true}
@@ -67,7 +70,7 @@ export const Navigation: React.FC<NavigationProps> = ({
               key={sectionLink.link}
             >
               {sectionLink.title}
-            </Link>
+            </ScrollLink>
           ))}
         </nav>
       </div>
