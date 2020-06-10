@@ -33,5 +33,6 @@ module.exports = {
     'gatsby-plugin-typescript',
     'gatsby-plugin-sass',
     'gatsby-plugin-webpack-size',
+    'gatsby-plugin-preact',
   ],
 };
