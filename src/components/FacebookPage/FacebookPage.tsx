@@ -21,6 +21,7 @@ export const FacebookPage: React.FC = () => {
     `&appId=${appId}`;
   return (
     <iframe
+      title="รวมรัตน์ กระจก อลูมิเนียม เฟสบุ๊ค"
       src={src}
       width={width}
       height={height}
