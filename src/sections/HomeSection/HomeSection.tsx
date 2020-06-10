@@ -73,16 +73,14 @@ export const HomeSection: React.FC = () => {
       <div className="home-container" style={{paddingTop: '70px'}}>
         <div className="item1">
           <Parallax y={[-20, 30]}>
-            <DescriptionCard {...homeDescription} />
+            <DescriptionCard {...homeDescription} isHeader />
           </Parallax>
         </div>
         <div className="item2">
-          <Parallax y={[0, 0]}>
-            <Image
-              withFrame
-              fluid={data.allFile.edges[0].node.childImageSharp.fluid}
-            />
-          </Parallax>
+          <Image
+            withFrame
+            fluid={data.allFile.edges[0].node.childImageSharp.fluid}
+          />
         </div>
       </div>
     </Section>
