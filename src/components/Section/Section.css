@@ -1,6 +1,8 @@
 .section {
   min-height: 100vh;
   padding-top: 70px;
-  /* Scroll Snap */
+}
+
+.section.snap {
   scroll-snap-align: start;
 }
