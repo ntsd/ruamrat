@@ -18,7 +18,7 @@ export const Footer: React.FC<FooterProps> = ({sectionLinks}) => {
             <h2>Links</h2>
             {sectionLinks.map((sectionLink: SectionLinks) => (
               <Link to={'/#' + sectionLink.link} key={sectionLink.link}>
-                <h3>{sectionLink.title}</h3>
+                {sectionLink.title}
               </Link>
             ))}
           </div>

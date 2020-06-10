@@ -8,27 +8,19 @@ Secondary: #ffdd00
 
 ## Todo List
 
-1. Components
+### 1. Components
 
-- Header
-- Menu Navigation
 - Carousel
-- Main Content
-- Footer
+- Gallery Page ผลงาน
+  
+## SEO
 
-1. Page
+### Keywords
 
-- Home หน้าแรก
-- Gallery ผลงาน
-- About Us ติดต่อเรา
+#### Google Trends
 
-1. Contract
-
-- Facebook
-- Line
-- Tel.
-- Address
-- Google Map
+- [กระจก อลูมิเนียม,กระจกอลูมิเนียม,ติดตั้ง กระจก อลูมิเนียม,ติดตั้ง กระจกอลูมิเนียม](https://trends.google.co.th/trends/explore?geo=TH&q=%E0%B8%81%E0%B8%A3%E0%B8%B0%E0%B8%88%E0%B8%81%20%E0%B8%AD%E0%B8%A5%E0%B8%B9%E0%B8%A1%E0%B8%B4%E0%B9%80%E0%B8%99%E0%B8%B5%E0%B8%A2%E0%B8%A1,%E0%B8%81%E0%B8%A3%E0%B8%B0%E0%B8%88%E0%B8%81%E0%B8%AD%E0%B8%A5%E0%B8%B9%E0%B8%A1%E0%B8%B4%E0%B9%80%E0%B8%99%E0%B8%B5%E0%B8%A2%E0%B8%A1,%E0%B8%95%E0%B8%B4%E0%B8%94%E0%B8%95%E0%B8%B1%E0%B9%89%E0%B8%87%20%E0%B8%81%E0%B8%A3%E0%B8%B0%E0%B8%88%E0%B8%81%20%E0%B8%AD%E0%B8%A5%E0%B8%B9%E0%B8%A1%E0%B8%B4%E0%B9%80%E0%B8%99%E0%B8%B5%E0%B8%A2%E0%B8%A1,%E0%B8%95%E0%B8%B4%E0%B8%94%E0%B8%95%E0%B8%B1%E0%B9%89%E0%B8%87%20%E0%B8%81%E0%B8%A3%E0%B8%B0%E0%B8%88%E0%B8%81%E0%B8%AD%E0%B8%A5%E0%B8%B9%E0%B8%A1%E0%B8%B4%E0%B9%80%E0%B8%99%E0%B8%B5%E0%B8%A2%E0%B8%A1)
+- [ร่มเกล้า,ฉลองกรุง,ลาดกระบัง,มีนบุรี,หนองจอก](https://trends.google.co.th/trends/explore?geo=TH&q=%E0%B8%A3%E0%B9%88%E0%B8%A1%E0%B9%80%E0%B8%81%E0%B8%A5%E0%B9%89%E0%B8%B2,%E0%B8%89%E0%B8%A5%E0%B8%AD%E0%B8%87%E0%B8%81%E0%B8%A3%E0%B8%B8%E0%B8%87,%E0%B8%A5%E0%B8%B2%E0%B8%94%E0%B8%81%E0%B8%A3%E0%B8%B0%E0%B8%9A%E0%B8%B1%E0%B8%87,%E0%B8%A1%E0%B8%B5%E0%B8%99%E0%B8%9A%E0%B8%B8%E0%B8%A3%E0%B8%B5,%E0%B8%AB%E0%B8%99%E0%B8%AD%E0%B8%87%E0%B8%88%E0%B8%AD%E0%B8%81)
 
 ## Examples Sites
 
