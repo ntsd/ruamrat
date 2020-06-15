@@ -1,3 +1,4 @@
+import React from 'react';
 import {Image} from '../../components/Image/Image';
 import './Grid.css';
 import {Parallax} from '../Parallax/Parallax';
@@ -15,7 +16,7 @@ interface GridProps {
   pageNumber: number;
 }
 
-export const Grid = ({items, pageNumber}: GridProps) => {
+export const Grid: React.FC<GridProps> = ({items, pageNumber}) => {
   shuffle(items);
 
   return (

@@ -1,3 +1,4 @@
+import React from 'react';
 import Img from 'gatsby-image';
 import './Image.css';
 
@@ -7,7 +8,11 @@ interface ImageProps {
   style?: React.CSSProperties;
 }
 
-export const Image = ({withFrame = false, fluid, style}: ImageProps) => {
+export const Image: React.FC<ImageProps> = ({
+  withFrame = false,
+  fluid,
+  style,
+}) => {
   return (
     <Img
       className={`${withFrame && 'img-frame'}`}

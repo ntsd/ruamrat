@@ -1,3 +1,4 @@
+import React from 'react';
 import {FacebookPage} from '../FacebookPage/FacebookPage';
 import {Section} from '../Section/Section';
 import {SectionLinks} from '../Navigation/Navigation';
@@ -8,7 +9,7 @@ interface FooterProps {
   sectionLinks: SectionLinks[];
 }
 
-export const Footer = ({sectionLinks}: FooterProps) => {
+export const Footer: React.FC<FooterProps> = ({sectionLinks}) => {
   return (
     <Section id="footer" style={{minHeight: 'auto'}}>
       <div className="container footer-container">

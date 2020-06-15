@@ -1,16 +1,16 @@
+import React from 'react';
 import './Spotlight.scss';
 
 export interface SpotlightProps {
   style?: React.CSSProperties;
   contentPosition: 'bottom' | 'top' | 'left' | 'right';
-  children: JSX.Element | JSX.Element[];
 }
 
-export const Spotlight = ({
+export const Spotlight: React.FC<SpotlightProps> = ({
   children,
   style,
   contentPosition,
-}: SpotlightProps) => {
+}) => {
   return (
     <div className={`spotlight ${contentPosition}`} style={style}>
       <div className="content">{children}</div>

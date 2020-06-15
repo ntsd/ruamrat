@@ -1,3 +1,4 @@
+import React from 'react';
 import './Section.css';
 
 interface SectionProps {
@@ -5,16 +6,15 @@ interface SectionProps {
   style?: React.CSSProperties;
   className?: string;
   snap?: boolean;
-  children?: JSX.Element[] | JSX.Element;
 }
 
-export const Section = ({
+export const Section: React.FC<SectionProps> = ({
   children,
   id,
   style,
   className = '',
   snap = true,
-}: SectionProps) => (
+}) => (
   <section
     id={id}
     className={'section ' + (snap ? 'snap ' : '') + className}

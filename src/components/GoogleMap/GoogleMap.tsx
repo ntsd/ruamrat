@@ -1,4 +1,6 @@
-export const GoogleMap = () => {
+import React from 'react';
+
+export const GoogleMap: React.FC = () => {
   return (
     <iframe
       width="100%"

@@ -1,3 +1,4 @@
+import React from 'react';
 import './IndexCard.css';
 
 interface IndexCardProps {
@@ -5,7 +6,7 @@ interface IndexCardProps {
   index: number;
 }
 
-export const IndexCard = ({title, index}: IndexCardProps) => {
+export const IndexCard: React.FC<IndexCardProps> = ({title, index}) => {
   function beautifyNumber(index: number) {
     return index < 10 ? `0${index}` : index;
   }

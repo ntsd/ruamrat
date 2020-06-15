@@ -1,19 +1,12 @@
-import {
-  Parallax as ReactParallax,
-  ParallaxProps as ReactParallaxProps,
-} from 'react-scroll-parallax';
-import {useEffect, useState, EffectCallback} from 'preact/hooks';
+import React, {useState, useEffect, EffectCallback} from 'react';
+import {Parallax as ReactParallax, ParallaxProps} from 'react-scroll-parallax';
 
 interface WindowSize {
   width: number | undefined;
   height: number | undefined;
 }
 
-interface ParallaxProps extends ReactParallaxProps {
-  children: any;
-}
-
-export const Parallax = (props: ParallaxProps) => {
+export const Parallax: React.FC<ParallaxProps> = (props: ParallaxProps) => {
   const isClient = typeof window === 'object';
 
   const getSize: () => WindowSize = () => {
