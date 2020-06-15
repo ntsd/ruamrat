@@ -7,7 +7,6 @@ module.exports = {
     author: '@hotcode',
   },
   plugins: [
-    'gatsby-plugin-preact',
     'gatsby-plugin-react-helmet',
     {
       resolve: 'gatsby-source-filesystem',
@@ -34,5 +33,6 @@ module.exports = {
     'gatsby-plugin-typescript',
     'gatsby-plugin-sass',
     'gatsby-plugin-webpack-size',
+    'gatsby-plugin-preact',
   ],
 };
