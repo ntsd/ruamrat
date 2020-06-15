@@ -1,17 +1,16 @@
-import React from 'react'
-import Image from 'gatsby-image'
-import { useStaticQuery, graphql } from 'gatsby'
-import { GoDownButton } from '../GoDownButton/GoDownButton'
-import './Hero.scss'
+import Image from 'gatsby-image';
+import {useStaticQuery, graphql} from 'gatsby';
+import {GoDownButton} from '../GoDownButton/GoDownButton';
+import './Hero.scss';
 
 interface HeroProps {
   children: never[];
 }
 
-export const Hero: React.FC<HeroProps> = ({ children }) => {
+export const Hero = ({children}: HeroProps) => {
   const data = useStaticQuery(graphql`
     query indexQuery {
-      hero: file(relativePath: { eq: "header.jpeg" }) {
+      hero: file(relativePath: {eq: "header.jpeg"}) {
         childImageSharp {
           fluid(quality: 100) {
             ...GatsbyImageSharpFluid
@@ -19,15 +18,15 @@ export const Hero: React.FC<HeroProps> = ({ children }) => {
         }
       }
     }
-  `)
+  `);
 
   return (
     <div className="hero-container">
-      <Image className="image" fluid={data.hero.childImageSharp.fluid}/>
+      <Image className="image" fluid={data.hero.childImageSharp.fluid} />
       <div className="overlay">
-        { children }
+        {children}
         <GoDownButton></GoDownButton>
       </div>
     </div>
-  )
-}
+  );
+};

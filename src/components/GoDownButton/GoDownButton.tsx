@@ -1,8 +1,7 @@
-import React from 'react';
 import {Link as ScrollLink} from 'react-scroll';
 import './GoDownButton.scss';
 
-export const GoDownButton: React.FC<{}> = () => (
+export const GoDownButton = () => (
   <ScrollLink
     to="two"
     activeClass="active"

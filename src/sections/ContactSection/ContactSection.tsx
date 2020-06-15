@@ -1,5 +1,3 @@
-import React from 'react';
-
 import {Section} from '../../components/Section/Section';
 import './ContactSection.scss';
 import {GoogleMap} from '../../components/GoogleMap/GoogleMap';
@@ -10,7 +8,7 @@ import {
 import {Button} from '../../components/Button/Button';
 import {RiPhoneLine, RiLineLine} from 'react-icons/ri';
 
-export const ContactSection: React.FC = () => {
+export const ContactSection = () => {
   const contactDescriptionFooter = (
     <>
       <a target="_blank" rel="noopener noreferrer" href="tel:0994916588">

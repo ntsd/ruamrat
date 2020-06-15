@@ -1,4 +1,3 @@
-import React from 'react';
 import './DescriptionCard.css';
 
 export interface DescriptionCardProps {
@@ -13,7 +12,7 @@ export interface DescriptionCardProps {
   isHeader?: boolean;
 }
 
-export const DescriptionCard: React.FC<DescriptionCardProps> = ({
+export const DescriptionCard = ({
   title,
   title2,
   description,
@@ -23,7 +22,7 @@ export const DescriptionCard: React.FC<DescriptionCardProps> = ({
   style,
   longDescription = false,
   isHeader = false,
-}) => {
+}: DescriptionCardProps) => {
   return (
     <div className="card-container" style={style}>
       {!noCrown && <div className="horizontal-line" />}

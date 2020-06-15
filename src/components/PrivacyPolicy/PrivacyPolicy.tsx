@@ -1,8 +1,7 @@
 /* eslint-disable react/no-unescaped-entities */
 /* eslint-disable react/jsx-no-target-blank */
-import React from 'react';
 
-export const PrivacyPolicy: React.FC = () => {
+export const PrivacyPolicy = () => {
   return (
     <>
       <h1>Privacy Policy</h1>

@@ -1,4 +1,3 @@
-import React from 'react';
 import {graphql, useStaticQuery} from 'gatsby';
 import {Navigation, SectionLinks} from '../Navigation/Navigation';
 import './Layout.scss';
@@ -10,7 +9,7 @@ interface LayoutProps {
   children: JSX.Element[] | JSX.Element;
 }
 
-export const Layout: React.FC<LayoutProps> = ({children}) => {
+export const Layout = ({children}: LayoutProps) => {
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
       site {

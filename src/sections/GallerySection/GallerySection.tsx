@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import {useState} from 'preact/hooks';
 
 import {Section} from '../../components/Section/Section';
 import {useStaticQuery, graphql} from 'gatsby';

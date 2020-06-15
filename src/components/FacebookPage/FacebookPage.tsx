@@ -1,6 +1,4 @@
-import React from 'react';
-
-export const FacebookPage: React.FC = () => {
+export const FacebookPage = () => {
   const width = '332';
   const height = '400';
   const pageUrl = 'https%3A%2F%2Fwww.facebook.com%2Fruamrat%2F';

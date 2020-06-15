@@ -1,4 +1,3 @@
-import React from 'react';
 import {useStaticQuery, graphql} from 'gatsby';
 import {RiLineLine, RiPhoneLine} from 'react-icons/ri';
 
@@ -12,7 +11,7 @@ import {Button} from '../../components/Button/Button';
 import './HomeSection.css';
 import {Parallax} from '../../components/Parallax/Parallax';
 
-export const HomeSection: React.FC = () => {
+export const HomeSection = () => {
   const data = useStaticQuery(graphql`
     query {
       allFile(

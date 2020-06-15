@@ -1,7 +1,7 @@
-import React, {useLayoutEffect} from 'react';
 import './Navigation.css';
 import {Link as ScrollLink} from 'react-scroll/modules';
 import {Link} from 'gatsby';
+import {useLayoutEffect} from 'preact/hooks';
 
 export interface SectionLinks {
   title: string;
@@ -13,10 +13,7 @@ interface NavigationProps {
   sectionLinks: SectionLinks[];
 }
 
-export const Navigation: React.FC<NavigationProps> = ({
-  siteTitle,
-  sectionLinks,
-}) => {
+export const Navigation = ({siteTitle, sectionLinks}: NavigationProps) => {
   useLayoutEffect(() => {
     const docElem = document.documentElement;
     const header = document.getElementsByClassName('cbp-af-header')[0];

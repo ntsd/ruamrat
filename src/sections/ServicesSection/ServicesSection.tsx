@@ -1,5 +1,3 @@
-import React from 'react';
-
 import {Section} from '../../components/Section/Section';
 import {
   DescriptionCard,
@@ -10,7 +8,7 @@ import {useStaticQuery, graphql} from 'gatsby';
 import {Image} from '../../components/Image/Image';
 import {Parallax} from '../../components/Parallax/Parallax';
 
-export const ServicesSection: React.FC = () => {
+export const ServicesSection = () => {
   const data = useStaticQuery(graphql`
     query {
       allFile(

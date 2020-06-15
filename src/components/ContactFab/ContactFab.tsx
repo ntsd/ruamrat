@@ -1,10 +1,14 @@
-import React, { useState, useLayoutEffect } from 'react';
-import { Fab, Action } from 'react-tiny-fab';
+import {Fab, Action} from 'react-tiny-fab';
 import 'react-tiny-fab/dist/styles.css';
-import { RiQuestionAnswerLine, RiLineLine, RiPhoneLine, RiFacebookLine } from 'react-icons/ri';
+import {
+  RiQuestionAnswerLine,
+  RiLineLine,
+  RiPhoneLine,
+  RiFacebookLine,
+} from 'react-icons/ri';
+import {useLayoutEffect, useState} from 'preact/hooks';
 
-export const ContactFab: React.FC = () => {
-
+export const ContactFab = () => {
   const [display, setDisplay] = useState('none');
 
   let displayTimeout: NodeJS.Timeout;
@@ -17,7 +21,7 @@ export const ContactFab: React.FC = () => {
         setDisplay('block');
       }, 2000);
     });
-  })
+  });
 
   return (
     <div style={{display: display}}>
@@ -32,11 +36,11 @@ export const ContactFab: React.FC = () => {
           onClick={() => {
             Object.assign(document.createElement('a'), {
               target: '_blank',
-              href: 'tel:0994916588'
+              href: 'tel:0994916588',
             }).click();
           }}
         >
-          <RiPhoneLine/>
+          <RiPhoneLine />
         </Action>
         <Action
           text="เพิ่มเพื่อน"
@@ -44,11 +48,11 @@ export const ContactFab: React.FC = () => {
           onClick={() => {
             Object.assign(document.createElement('a'), {
               target: '_blank',
-              href: 'https://lin.ee/2GVWsmiLd'
+              href: 'https://lin.ee/2GVWsmiLd',
             }).click();
           }}
         >
-          <RiLineLine/>
+          <RiLineLine />
         </Action>
         <Action
           text="เฟสบุ๊ค"
@@ -56,13 +60,13 @@ export const ContactFab: React.FC = () => {
           onClick={() => {
             Object.assign(document.createElement('a'), {
               target: '_blank',
-              href: 'https://web.facebook.com/ruamrat'
+              href: 'https://web.facebook.com/ruamrat',
             }).click();
           }}
         >
-          <RiFacebookLine/>
+          <RiFacebookLine />
         </Action>
       </Fab>
     </div>
   );
-}
+};
