@@ -4,7 +4,9 @@ export const FacebookPage: React.FC = () => {
   const [showIframe, setShowIframe] = useState(false);
 
   useEffect(() => {
-    setShowIframe(true);
+    setTimeout(() => {
+      setShowIframe(true);
+    }, 5000);
   });
 
   const width = '332';
