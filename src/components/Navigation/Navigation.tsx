@@ -1,4 +1,4 @@
-import React, {useLayoutEffect} from 'react';
+import React, {useEffect} from 'react';
 import './Navigation.css';
 import {Link as ScrollLink} from 'react-scroll/modules';
 import {Link} from 'gatsby';
@@ -17,7 +17,7 @@ export const Navigation: React.FC<NavigationProps> = ({
   siteTitle,
   sectionLinks,
 }) => {
-  useLayoutEffect(() => {
+  useEffect(() => {
     const docElem = document.documentElement;
     const header = document.getElementsByClassName('cbp-af-header')[0];
     let didScroll = false;

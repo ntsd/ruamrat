@@ -1,4 +1,4 @@
-import React, {useState, useLayoutEffect} from 'react';
+import React, {useState, useEffect} from 'react';
 import {Fab, Action} from 'react-tiny-fab';
 import 'react-tiny-fab/dist/styles.css';
 import {
@@ -13,7 +13,7 @@ export const ContactFab: React.FC = () => {
 
   let displayTimeout: NodeJS.Timeout;
 
-  useLayoutEffect(() => {
+  useEffect(() => {
     window.addEventListener('scroll', () => {
       clearTimeout(displayTimeout);
       setDisplay('none');
