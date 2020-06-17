@@ -1,9 +1,9 @@
-import React, {useState, useLayoutEffect} from 'react';
+import React, {useState, useEffect} from 'react';
 
 export const FacebookPage: React.FC = () => {
   const [showIframe, setShowIframe] = useState(false);
 
-  useLayoutEffect(() => {
+  useEffect(() => {
     setShowIframe(true);
   });
 
