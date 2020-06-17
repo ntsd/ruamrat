@@ -34,5 +34,7 @@ module.exports = {
     'gatsby-plugin-sass',
     'gatsby-plugin-webpack-size',
     'gatsby-plugin-preact',
+    'gatsby-plugin-sitemap',
+    'gatsby-plugin-netlify',
   ],
 };
