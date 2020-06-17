@@ -35,5 +35,6 @@ module.exports = {
     'gatsby-plugin-webpack-size',
     'gatsby-plugin-preact',
     'gatsby-plugin-sitemap',
+    'gatsby-plugin-netlify',
   ],
 };
