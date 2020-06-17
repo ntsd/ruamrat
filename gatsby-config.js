@@ -5,6 +5,7 @@ module.exports = {
     description:
       'จำหน่าย ติดตั้ง กระจกอลูมิเนียม กระจก อลูมิเนียม มุ้งลวด เหล็กดัด พร้อมอุปกรณ์ ลาดกระบัง มีนบุรี หนองจอก ร่มเกล้า',
     author: '@hotcode',
+    siteUrl: 'https://ruamrat.com',
   },
   plugins: [
     'gatsby-plugin-react-helmet',
