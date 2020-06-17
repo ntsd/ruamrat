@@ -25,7 +25,7 @@ export const GallerySection: React.FC = () => {
           node {
             childImageSharp {
               fluid(maxWidth: 300) {
-                ...GatsbyImageSharpFluid
+                ...GatsbyImageSharpFluid_withWebp
               }
             }
           }
@@ -44,7 +44,7 @@ export const GallerySection: React.FC = () => {
             name
             childImageSharp {
               fluid(maxWidth: 300, maxHeight: 240) {
-                ...GatsbyImageSharpFluid
+                ...GatsbyImageSharpFluid_withWebp
               }
             }
           }
@@ -63,7 +63,7 @@ export const GallerySection: React.FC = () => {
             name
             childImageSharp {
               fluid(maxWidth: 300) {
-                ...GatsbyImageSharpFluid
+                ...GatsbyImageSharpFluid_withWebp
               }
             }
           }

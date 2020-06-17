@@ -20,7 +20,7 @@ export const ServicesSection: React.FC = () => {
           node {
             childImageSharp {
               fluid(maxWidth: 570) {
-                ...GatsbyImageSharpFluid
+                ...GatsbyImageSharpFluid_withWebp
               }
             }
           }
