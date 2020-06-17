@@ -21,8 +21,8 @@ export const HomeSection: React.FC = () => {
         edges {
           node {
             childImageSharp {
-              fluid(maxWidth: 780) {
-                ...GatsbyImageSharpFluid
+              fluid(maxWidth: 730) {
+                ...GatsbyImageSharpFluid_withWebp
               }
             }
           }
