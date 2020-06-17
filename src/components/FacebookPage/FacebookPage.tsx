@@ -1,6 +1,12 @@
-import React from 'react';
+import React, {useState, useLayoutEffect} from 'react';
 
 export const FacebookPage: React.FC = () => {
+  const [showIframe, setShowIframe] = useState(false);
+
+  useLayoutEffect(() => {
+    setShowIframe(true);
+  });
+
   const width = '332';
   const height = '400';
   const pageUrl = 'https%3A%2F%2Fwww.facebook.com%2Fruamrat%2F';
@@ -20,15 +26,19 @@ export const FacebookPage: React.FC = () => {
     `&show_facepile=${showFacepile}` +
     `&appId=${appId}`;
   return (
-    <iframe
-      title="รวมรัตน์ กระจก อลูมิเนียม กระจกอลูมิเนียม"
-      src={src}
-      width={width}
-      height={height}
-      style={{border: 'none', overflow: 'hidden'}}
-      scrolling="no"
-      allowTransparency={true}
-      allow="encrypted-media"
-    ></iframe>
+    <>
+      {showIframe && (
+        <iframe
+          title="รวมรัตน์ กระจก อลูมิเนียม กระจกอลูมิเนียม"
+          src={src}
+          width={width}
+          height={height}
+          style={{border: 'none', overflow: 'hidden'}}
+          scrolling="no"
+          allowTransparency={true}
+          allow="encrypted-media"
+        ></iframe>
+      )}
+    </>
   );
 };
