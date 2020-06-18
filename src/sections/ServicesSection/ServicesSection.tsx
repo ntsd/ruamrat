@@ -43,7 +43,7 @@ export const ServicesSection: React.FC = () => {
 
   return (
     <Section id="services">
-      <div className="container">
+      <div className="container-fluid">
         <div className="row">
           <div className="col-xl-7">
             <Image

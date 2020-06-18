@@ -61,7 +61,7 @@ export const ContactSection: React.FC = () => {
 
   return (
     <Section id="contact">
-      <div className="container">
+      <div className="container-fluid">
         <div className="row">
           <div className="col-xl-5">
             <DescriptionCard longDescription {...contactDescription} />

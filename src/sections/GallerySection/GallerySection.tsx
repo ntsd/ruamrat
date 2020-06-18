@@ -110,45 +110,47 @@ export const GallerySection: React.FC = () => {
 
   return (
     <Section id="gallery">
-      <div className="collection-page-container">
-        <div className="thumb-container">
-          <Image fluid={getThumbImage().node.childImageSharp.fluid} />
-          <IndexCard index={page + 1} title={getPage().title} />
-        </div>
+      <div className="container-fluid">
+        <div className="collection-page-container">
+          <div className="thumb-container">
+            <Image fluid={getThumbImage().node.childImageSharp.fluid} />
+            <IndexCard index={page + 1} title={getPage().title} />
+          </div>
 
-        <div className="large">
-          <Image fluid={getLargeImage().node.childImageSharp.fluid} />
-        </div>
+          <div className="large">
+            <Image fluid={getLargeImage().node.childImageSharp.fluid} />
+          </div>
 
-        <div className="card">
-          <Parallax y={[0, 100]}>
-            <DescriptionCard
-              longDescription
-              title={getPage().title}
-              description={getPage().description}
-            />
-          </Parallax>
-        </div>
+          <div className="card">
+            <Parallax y={[0, 100]}>
+              <DescriptionCard
+                longDescription
+                title={getPage().title}
+                description={getPage().description}
+              />
+            </Parallax>
+          </div>
 
-        <div className="btn-container">
-          <Button
-            type="secondary"
-            style={{fontSize: '2em'}}
-            onClick={decrementPage}
-          >
-            ←
-          </Button>
-          <Button
-            type="secondary"
-            style={{fontSize: '2em'}}
-            onClick={incrementPage}
-          >
-            →
-          </Button>
-        </div>
+          <div className="btn-container">
+            <Button
+              type="secondary"
+              style={{fontSize: '2em'}}
+              onClick={decrementPage}
+            >
+              ←
+            </Button>
+            <Button
+              type="secondary"
+              style={{fontSize: '2em'}}
+              onClick={incrementPage}
+            >
+              →
+            </Button>
+          </div>
 
-        <div className="image-grid">
-          <Grid items={data.gridImages.edges} pageNumber={page + 1} />
+          <div className="image-grid">
+            <Grid items={data.gridImages.edges} pageNumber={page + 1} />
+          </div>
         </div>
       </div>
     </Section>
