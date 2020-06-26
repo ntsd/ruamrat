@@ -12,7 +12,7 @@ interface FooterProps {
 export const Footer: React.FC<FooterProps> = ({sectionLinks}) => {
   return (
     <Section id="footer" style={{minHeight: 'auto'}}>
-      <div className="container footer-container">
+      <div className="container-fluid footer-container">
         <div className="row" style={{textAlign: 'center'}}>
           <div className="col-sm-6" style={{paddingTop: '60px'}}>
             <div>Links</div>

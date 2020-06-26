@@ -13,7 +13,7 @@ export const Section: React.FC<SectionProps> = ({
   id,
   style,
   className = '',
-  snap = true,
+  snap = false,
 }) => (
   <section
     id={id}
