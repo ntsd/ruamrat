@@ -13,6 +13,7 @@ export const GoogleMap: React.FC = () => {
     <>
       {showIframe && (
         <iframe
+          title="Ruamrat Map"
           width="100%"
           height="100%"
           style={{border: 0, minHeight: '50vh'}}

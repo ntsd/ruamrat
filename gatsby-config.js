@@ -28,6 +28,7 @@ module.exports = {
         theme_color: '#ff2f00',
         display: 'minimal-ui',
         icon: 'src/images/icon.png', // This path is relative to the root of the site.
+        purpose: 'any',
       },
     },
     'gatsby-plugin-offline',
