@@ -9,22 +9,8 @@ import {
 } from 'react-icons/ri';
 
 export const ContactFab: React.FC = () => {
-  const [display, setDisplay] = useState('none');
-
-  let displayTimeout: NodeJS.Timeout;
-
-  useEffect(() => {
-    window.addEventListener('scroll', () => {
-      clearTimeout(displayTimeout);
-      setDisplay('none');
-      displayTimeout = setTimeout(() => {
-        setDisplay('block');
-      }, 2000);
-    });
-  });
-
   return (
-    <div style={{display: display}}>
+    <div>
       <Fab
         icon={<RiQuestionAnswerLine />}
         mainButtonStyles={{backgroundColor: 'rgba(255, 47, 0, 0.7)'}}
