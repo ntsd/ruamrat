@@ -27,7 +27,7 @@
     "gatsby-plugin-webpack-size": "^1.0.0",
     "gatsby-source-filesystem": "^2.2.1",
     "gatsby-transformer-sharp": "^2.4.1",
-    "node-sass": "^4.14.1",
+    "node-sass": "^7.0.0",
     "preact": "^10.4.6",
     "preact-render-to-string": "^5.1.10",
     "prop-types": "^15.7.2",
