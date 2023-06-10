@@ -1,0 +1,33 @@
+---
+import FacebookPage from '../FacebookPage/FacebookPage.astro';
+import Section from '../Section/Section.astro';
+import type { SectionLinks } from '../Navigation/Navigation.astro';
+
+interface Props {
+  sectionLinks: SectionLinks[];
+}
+
+const { sectionLinks } = Astro.props;
+---
+
+
+<Section id="footer">
+  <div class="container mx-auto">
+    <div class="grid grid-cols-12">
+      <div class="col-span-6 text-center">
+        <FacebookPage></FacebookPage>
+      </div>
+      <div class="col-span-6 text-center">
+        {sectionLinks.map((sectionLink: SectionLinks) => (
+          <a href={'/#' + sectionLink.link}>
+            <div>{sectionLink.title}</div>
+          </a>
+        ))}
+      </div>
+    </div>
+    <div class="text-center">
+      © {new Date().getFullYear()} by{' '}
+      <a href="https://ntsd.dev">ntsd.dev</a>. All rights reserved.
+    </div>
+  </div>
+</Section>

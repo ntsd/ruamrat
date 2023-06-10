@@ -1,0 +1,28 @@
+---
+import './Navigation.css';
+
+export interface SectionLinks {
+  title: string;
+  link: string;
+}
+
+interface NavigationProps {
+  siteTitle: string;
+  sectionLinks: SectionLinks[];
+}
+
+const { siteTitle, sectionLinks } = Astro.props
+---
+
+<div class="cbp-af-header">
+  <div class="cbp-af-inner">
+    <div class="logo">
+      <a href="/">{siteTitle}</a>
+    </div>
+    <nav>
+      {sectionLinks.map((sectionLink: SectionLinks) => (
+        <a href={sectionLink.link}>{sectionLink.title}</a>
+      ))}
+    </nav>
+  </div>
+</div>

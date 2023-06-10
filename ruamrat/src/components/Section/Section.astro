@@ -1,0 +1,17 @@
+---
+import './Section.css';
+
+interface Props {
+  id: string;
+  className?: string;
+  snap?: boolean;
+}
+
+const { id, className, snap } = Astro.props;
+---
+
+<section
+  class={'section ' + (snap ? 'snap ' : '') + className}
+>
+  <slot/>
+</section>
