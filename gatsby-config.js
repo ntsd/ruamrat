@@ -34,10 +34,7 @@ module.exports = {
     'gatsby-plugin-offline',
     'gatsby-plugin-typescript',
     'gatsby-plugin-sass',
-    'gatsby-plugin-webpack-size',
-    'gatsby-plugin-preact',
     'gatsby-plugin-sitemap',
     'gatsby-plugin-robots-txt',
-    'gatsby-plugin-netlify',
   ],
 };

@@ -9,6 +9,9 @@ import {
 } from 'react-icons/ri';
 
 export const ContactFab: React.FC = () => {
+  if (typeof window === 'undefined') {
+    return null;
+  }
   return (
     <div>
       <Fab
