@@ -5,12 +5,10 @@
   "version": "0.1.0",
   "author": "Jirawat Boonkumnerd <jo06942@gmail.com>",
   "dependencies": {
-    "@types/animejs": "^3.1.12",
     "@types/react": "^18.2.67",
     "@types/react-dom": "^18.2.22",
     "@types/react-helmet": "^6.1.11",
     "@types/react-scroll": "^1.8.10",
-    "animejs": "^3.2.2",
     "gatsby": "^5.13.3",
     "gatsby-image": "^2.3.0",
     "gatsby-plugin-manifest": "^5.13.1",
@@ -49,7 +47,6 @@
     "clean": "gts clean",
     "compile": "tsc",
     "fix": "gts fix",
-    "prepare": "npm run compile",
     "pretest": "npm run compile",
     "posttest": "npm run check"
   },
